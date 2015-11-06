@@ -1,0 +1,3441 @@
+1
+00:00:00,000 --> 00:00:03,440
+>> [NHẠC ĐANG CHƠI]
+
+2
+00:00:03,440 --> 00:01:57,217
+ 
+
+3
+00:01:57,217 --> 00:02:00,710
+>> [Vỗ tay]
+
+4
+00:02:00,710 --> 00:02:05,700
+ 
+
+5
+00:02:05,700 --> 00:02:09,669
+>> DAVID J. MALAN: This is CS50,
+Harvard University's introduction
+
+6
+00:02:09,669 --> 00:02:12,370
+về các kiến thức bao trùm của ngành khoa học máy tính
+
+7
+00:02:12,370 --> 00:02:14,180
+và nghệ thuật lập trình.
+
+8
+00:02:14,180 --> 00:02:17,530
+Nếu các bạn cũng giống như các học viên những năm trước, ngồi tại đây
+
+9
+00:02:17,530 --> 00:02:21,450
+với một chút căng thẳng, và cho rằng mình không thuộc về nơi này,
+
+10
+00:02:21,450 --> 00:02:24,270
+và nghĩ rằng hầu hết mọi người xung quanh
+
+11
+00:02:24,270 --> 00:02:27,730
+biết nhiều hơn mình rất nhiều, và họ thực sự am hiểu về ngành khoa học máy tính
+
+12
+00:02:27,730 --> 00:02:30,430
+hoặc máy tính nói chung, các bạn nên biết rằng
+
+13
+00:02:30,430 --> 00:02:36,140
+78% trong số các sinh viên theo học khoá này chưa từng học qua môn này.
+
+14
+00:02:36,140 --> 00:02:39,570
+>> Thật vậy, có 100 điểm có trên màn hình, 78 trong số đó
+
+15
+00:02:39,570 --> 00:02:43,540
+có màu xanh đặc, và điều đó có nghĩa là, nếu bạn ở trong số đó,
+
+16
+00:02:43,540 --> 00:02:46,420
+bạn không hề đơn độc mà thực ra có rất nhiều bạn đồng hành.
+
+17
+00:02:46,420 --> 00:02:50,320
+Và nếu các bạn nằm trong số 22% học viên CS50
+
+18
+00:02:50,320 --> 00:02:53,920
+có kinh nghiệm trước, cho dù ở trường trung học hay chương trình nào đó khác,
+
+19
+00:02:53,920 --> 00:02:56,430
+các bạn cũng sẽ được thử thách trong khóa học.
+
+20
+00:02:56,430 --> 00:02:59,930
+>> Chúng tôi không chỉ có các tracks riêng cho các sinh viên tuỳ theo kinh nghiệm ít hay nhiều
+
+21
+00:02:59,930 --> 00:03:03,789
+mà chúng tôi còn có các phiên bản "hacker"
+
+22
+00:03:03,789 --> 00:03:06,080
+của các bài tập để đem lại thử thách
+
+23
+00:03:06,080 --> 00:03:09,650
+cho các bạn và giúp các bạn tiếp cận cùng tài liệu
+
+24
+00:03:09,650 --> 00:03:12,140
+nhưng từ một góc độ tinh vi hơn.
+
+25
+00:03:12,140 --> 00:03:13,900
+>> Khoa học máy tính là gì?
+
+26
+00:03:13,900 --> 00:03:17,750
+Điều quan trọng khi bạn khám phá lĩnh vực này
+
+27
+00:03:17,750 --> 00:03:20,500
+không phải là thứ hạng của mình ở đâu so với các bạn trong lớp
+
+28
+00:03:20,500 --> 00:03:25,350
+mà là những gì bạn sẽ học được sau khoá học này so với chính bạn
+
+29
+00:03:25,350 --> 00:03:26,720
+khi mới bắt đầu.
+
+30
+00:03:26,720 --> 00:03:31,850
+Nói về khoa học máy tính -- hãy gọi nó là khoa học của sự tính toán --
+
+31
+00:03:31,850 --> 00:03:35,910
+nói một cách đơn giản thì đó là việc lấy một dữ liệu vào (input)
+
+32
+00:03:35,910 --> 00:03:39,460
+và tạo ra dữ liệu ra (output), dựa trên giải thuật (algorithms),
+
+33
+00:03:39,460 --> 00:03:43,700
+một tập hợp lệnh để giải quyết một vấn đề nào đó cho dữ liệu vào.
+
+34
+00:03:43,700 --> 00:03:48,460
+để tạo ra một dữ liệu ra hay một lời giải mà bạn quan tâm.
+
+35
+00:03:48,460 --> 00:03:51,310
+>> Chúng tôi vừa có dịp đi du lịch đến
+
+36
+00:03:51,310 --> 00:03:53,170
+California để gặp một cựu sinh viên.
+
+37
+00:03:53,170 --> 00:03:54,650
+Tên cô ấy là Susan Wojcicki.
+
+38
+00:03:54,650 --> 00:03:57,190
+Và cô ấy muốn nói chuyện với bạn ở đây qua video
+
+39
+00:03:57,190 --> 00:04:01,690
+để cho bạn thấy chỉ một ít kiến thức về khoa học máy tính
+
+40
+00:04:01,690 --> 00:04:03,770
+đã hữu ích như thế nào.
+
+41
+00:04:03,770 --> 00:04:06,870
+Thậm chí nếu bạn không theo đuổi lĩnh vực khoa học máy tính,
+
+42
+00:04:06,870 --> 00:04:09,330
+hoặc thậm chí kỹ thuật nói chung,
+
+43
+00:04:09,330 --> 00:04:12,360
+bạn sẽ thấy, trên thực tế, khóa học đã có ảnh hưởng thế nào tới cuộc sống của cô ấy.
+
+44
+00:04:12,360 --> 00:04:16,630
+Cô ấy học khoá học này khi cô ấy đã là sinh viên năm cuối ở Harvard.
+
+45
+00:04:16,630 --> 00:04:19,482
+>> Hãy làm dịu đèn cho Susan nào.
+
+46
+00:04:19,482 --> 00:04:20,690
+Susan Wojcicki: Xin chào.
+
+47
+00:04:20,690 --> 00:04:22,100
+Tôi là Susan Wojcicki.
+
+48
+00:04:22,100 --> 00:04:24,110
+Tôi là giám đốc điều hành của YouTube.
+
+49
+00:04:24,110 --> 00:04:29,150
+Tôi đã học CS50 khi tôi là sinh viên năm cuối ở Harvard vào năm 1990.
+
+50
+00:04:29,150 --> 00:04:31,220
+Thực ra chuyên ngành của tôi khi đó là lịch sử và văn học.
+
+51
+00:04:31,220 --> 00:04:36,760
+>> Vào mùa hè khi tôi đang học năm thứ 3, tôi nhận ra
+
+52
+00:04:36,760 --> 00:04:39,060
+có lẽ mình muốn tìm hiểu về máy tính.
+
+53
+00:04:39,060 --> 00:04:40,930
+Vậy nên tôi đã trở lại.
+
+54
+00:04:40,930 --> 00:04:42,500
+Tôi học CS50.
+
+55
+00:04:42,500 --> 00:04:46,940
+Khoá học thật khó, nhưng nó là lớp học tuyệt vời nhất mà tôi đã trải qua.
+
+56
+00:04:46,940 --> 00:04:49,630
+>> Nó đã thay đổi cách tôi suy nghĩ về mọi thứ.
+
+57
+00:04:49,630 --> 00:04:55,810
+Và khi tôi tốt nghiệp đại học Harvard vào năm 1990, tôi đã đến Silicon Valley.
+
+58
+00:04:55,810 --> 00:04:57,140
+Và tôi có một công việc.
+
+59
+00:04:57,140 --> 00:05:00,150
+Và tôi đã làm việc về công nghệ từ đó.
+
+60
+00:05:00,150 --> 00:05:02,650
+DAVID J. Malan: Nào, có một điều Susan không đề cập đến trong đoạn video này,
+
+61
+00:05:02,650 --> 00:05:05,340
+đó là nhà để xe của cô ấy chính là nơi Google
+
+62
+00:05:05,340 --> 00:05:07,420
+đã được thành lập bởi Larry và Sergey.
+
+63
+00:05:07,420 --> 00:05:11,169
+>> Chúng tôi cũng đã tìm đến những người bạn của chúng tôi tại code.org, một tổ chức
+
+64
+00:05:11,169 --> 00:05:13,460
+trong năm qua đã làm nhiều người thật sự phấn khích
+
+65
+00:05:13,460 --> 00:05:16,520
+về khoa học máy tính và đặc biệt là lập trình.
+
+66
+00:05:16,520 --> 00:05:20,590
+Nhưng chú ý là lập trình đơn thuần không phải là khoa học máy tính.
+
+67
+00:05:20,590 --> 00:05:22,090
+Khoa học máy tính không phải là lập trình.
+
+68
+00:05:22,090 --> 00:05:24,560
+Lập trình chỉ là một công cụ -- mà tất cả các bạn
+
+69
+00:05:24,560 --> 00:05:27,510
+sẽ thông thạo khi khoá học kết thúc --
+
+70
+00:05:27,510 --> 00:05:30,650
+để bạn có thể áp dụng không chỉ cho các khóa học về khoa học máy tính trong tương lai
+
+71
+00:05:30,650 --> 00:05:33,670
+mà còn cho bất cứ lĩnh vực nào, dù là khoa học nhân văn,
+
+72
+00:05:33,670 --> 00:05:36,090
+khoa học xã hội, khoa học tự nhiên,...
+
+73
+00:05:36,090 --> 00:05:39,740
+>> Thật vậy, hãy nghe một vài cựu sinh viên khác và các đồng nghiệp của họ
+
+74
+00:05:39,740 --> 00:05:43,400
+nói chuyện về các ứng dụng mà lĩnh vực này có thể mang lại.
+
+75
+00:05:43,400 --> 00:05:52,340
+ 
+
+76
+00:05:52,340 --> 00:05:57,350
+>> Bill Gates: Lần đầu tiên tôi được dùng máy tính là khi tôi 13 tuổi.
+
+77
+00:05:57,350 --> 00:06:00,485
+>> Jack Dorsey: Cha mẹ tôi mua cho tôi một máy Macintosh vào năm 1984
+
+78
+00:06:00,485 --> 00:06:01,640
+khi tôi lên tám tuổi.
+
+79
+00:06:01,640 --> 00:06:02,990
+>> Mark Zuckerberg: Khi đó tôi học lớp sáu.
+
+80
+00:06:02,990 --> 00:06:04,670
+>> SPEAKER 1: Tôi đã học viết mã (code) trong trường đại học.
+
+81
+00:06:04,670 --> 00:06:09,080
+>> Ruchi Sanghvi: Học kỳ đầu tiên, năm thứ nhất, Nhập môn Khoa học Máy tính.
+
+82
+00:06:09,080 --> 00:06:11,850
+>> Bill Gates: Tôi đã viết một chương trình chơi tic-tac-toe.
+
+83
+00:06:11,850 --> 00:06:14,100
+>> DREW HOUSTON: Tôi nghĩ đó là sự khởi đầu khá khiêm tốn.
+
+84
+00:06:14,100 --> 00:06:16,370
+Tôi nghĩ rằng chương trình đầu tiên tôi đã viết hỏi những thứ như,
+
+85
+00:06:16,370 --> 00:06:17,820
+Màu sắc yêu thích của bạn là gì?
+
+86
+00:06:17,820 --> 00:06:18,696
+Hoặc bạn bao nhiêu tuổi?
+
+87
+00:06:18,696 --> 00:06:21,070
+ELENA SILENOK: đầu tiên tôi học cách làm thế nào để có một vòng tròn màu xanh lá cây
+
+88
+00:06:21,070 --> 00:06:23,670
+và một hình vuông màu đỏ xuất hiện trên màn hình.
+
+89
+00:06:23,670 --> 00:06:25,420
+Gabe Newell: Lần đầu tiên tôi thấy được
+
+90
+00:06:25,420 --> 00:06:27,360
+một cái gì đó hiện lên và nói, "Hello, world"
+
+91
+00:06:27,360 --> 00:06:29,710
+Và tôi đã ra lệnh cho máy tính làm việc đó.
+
+92
+00:06:29,710 --> 00:06:30,850
+Nó thật sự làm tôi kinh ngạc.
+
+93
+00:06:30,850 --> 00:06:33,224
+>> Mark Zuckerberg: Tôi bắt đầu học lập trình
+
+94
+00:06:33,224 --> 00:06:35,450
+không phải vì muốn tìm hiểu tất cả về khoa học máy tính
+
+95
+00:06:35,450 --> 00:06:38,630
+hoặc cố gắng để làm chủ ngành này hay điều gì tương tự như thế.
+
+96
+00:06:38,630 --> 00:06:41,591
+Nó bắt nguồn từ việc tôi muốn làm một điều đơn giản này.
+
+97
+00:06:41,591 --> 00:06:44,340
+Tôi muốn làm một cái gì đó thú vị cho bản thân mình và các chị em của tôi.
+
+98
+00:06:44,340 --> 00:06:46,399
+>> Và tôi đã viết một chương trình nhỏ.
+
+99
+00:06:46,399 --> 00:06:48,440
+Và sau đó cứ cải tiến nó từng chút một.
+
+100
+00:06:48,440 --> 00:06:49,930
+Và khi tôi cần phải học một cái gì đó mới,
+
+101
+00:06:49,930 --> 00:06:52,210
+Tôi tra cứu trong sách hoặc từ Internet
+
+102
+00:06:52,210 --> 00:06:53,240
+và lại thêm một chút vào chương trình đó.
+
+103
+00:06:53,240 --> 00:06:56,300
+>> DREW HOUSTON: Nó thực sự không giống như chơi một nhạc cụ hoặc một cái gì đó
+
+104
+00:06:56,300 --> 00:07:00,007
+hoặc chơi một môn thể thao.
+
+105
+00:07:00,007 --> 00:07:01,090
+DAVID J. Malan: Tốt rồi.
+
+106
+00:07:01,090 --> 00:07:04,120
+Nào, giờ chúng ta thực sự đi sâu hơn chút nữa nhé.
+
+107
+00:07:04,120 --> 00:07:07,430
+Các dữ liệu vào và ra mà chúng ta đang nói tới ở đây là gì?
+
+108
+00:07:07,430 --> 00:07:09,110
+>> Một cái gì đó đơn giản thì sao nhỉ?
+
+109
+00:07:09,110 --> 00:07:12,120
+Dù bạn không quen với khoa học máy tính chút nào, có lẽ bạn cũng phần nào biết rằng,
+
+110
+00:07:12,120 --> 00:07:16,570
+bằng cách nào đó mà máy tính sử dụng và chỉ hiểu chỉ số 0 và 1.
+
+111
+00:07:16,570 --> 00:07:20,500
+Như vậy là sao nhỉ, máy tính để bàn và cả máy xách tay ngày nay
+
+112
+00:07:20,500 --> 00:07:21,280
+có thể làm được biết bao nhiêu việc cơ mà?
+
+113
+00:07:21,280 --> 00:07:24,310
+>> Bảng chữ cái duy nhất mà máy tính hiểu
+
+114
+00:07:24,310 --> 00:07:26,410
+là số 0 hoặc là số 1.
+
+115
+00:07:26,410 --> 00:07:27,470
+Bạn thử nghĩ xem
+
+116
+00:07:27,470 --> 00:07:30,840
+Con người chúng ta có xu hướng sử dụng hệ thập phân decimal, thập (dec) là 10
+
+117
+00:07:30,840 --> 00:07:33,970
+Và đó là 10 vì chúng ta có 10 chữ số, từ 0 đến 9.
+
+118
+00:07:33,970 --> 00:07:36,180
+>> Ngược lại, máy tính lại sử dụng hệ nhị phân (binary).
+
+119
+00:07:36,180 --> 00:07:37,270
+Nhị (bi) có nghĩa là hai.
+
+120
+00:07:37,270 --> 00:07:39,560
+Vậy nên máy tính chỉ dùng số 0 và 1.
+
+121
+00:07:39,560 --> 00:07:42,680
+Nhưng hóa ra, chỉ với số 0 và 1,
+
+122
+00:07:42,680 --> 00:07:45,900
+ta đã có một bảng chữ cái đủ lớn để biểu diễn cho hầu hết
+
+123
+00:07:45,900 --> 00:07:48,490
+bất kỳ dữ liệu nào mà bạn muốn, cho dù đó là một con số,
+
+124
+00:07:48,490 --> 00:07:52,100
+một chữ cái, một hình ảnh hoặc video trên màn hình.
+
+125
+00:07:52,100 --> 00:07:57,140
+>>Hãy cùng suy nghĩ xem chúng ta thường hiểu số này như thế nào.
+
+126
+00:07:57,140 --> 00:08:00,010
+Đây chỉ là ba chữ số, 1, 2, 3.
+
+127
+00:08:00,010 --> 00:08:04,570
+Nhưng chúng ta đều nhận ra ngay đây là số 123.
+
+128
+00:08:04,570 --> 00:08:05,510
+Nhưng tại sao vậy?
+
+129
+00:08:05,510 --> 00:08:07,570
+>> Vâng, nếu bạn nghĩ lại ở trường tiểu học
+
+130
+00:08:07,570 --> 00:08:11,700
+có thể bạn đã được dạy để nghĩ về những con số này theo cột
+
+131
+00:08:11,700 --> 00:08:14,700
+ở đây số 1 là hàng trăm, 2 là hàng chục,
+
+132
+00:08:14,700 --> 00:08:16,360
+và ba là hàng đơn vị.
+
+133
+00:08:16,360 --> 00:08:17,790
+Tại sao điều này lại hữu ích?
+
+134
+00:08:17,790 --> 00:08:19,665
+Hãy nghĩ những phép tính toán siêu dễ
+
+135
+00:08:19,665 --> 00:08:22,219
+mà tất cả chúng ta đã làm trong nhiều năm nay.
+
+136
+00:08:22,219 --> 00:08:24,510
+Cụ thể nếu bạn đã có số 1  ở hàng trăm,
+
+137
+00:08:24,510 --> 00:08:29,610
+bạn làm phép toán nhanh chóng 100 lần 1 cộng với 10 lần 2--
+
+138
+00:08:29,610 --> 00:08:33,059
+vì hai là hàng chục-- cộng với 1 lần 3--
+
+139
+00:08:33,059 --> 00:08:34,830
+vì ba là ở hàng đơn vị.
+
+140
+00:08:34,830 --> 00:08:37,039
+Vì vậy, tất nhiên, nếu chúng ta thực sự nhân lên,
+
+141
+00:08:37,039 --> 00:08:39,600
+cái chúng ta đang thực sự biểu diễn với qui luật này
+
+142
+00:08:39,600 --> 00:08:46,150
+-- 123 -- là 100 cộng 20 cộng với 3, và tất nhiên là cho kết quả 123.
+
+143
+00:08:46,150 --> 00:08:51,130
+>> Về cơ bản thì hệ nhị phân, hay chính xác ra là máy tính, nói cùng một ngôn ngữ
+
+144
+00:08:51,130 --> 00:08:51,680
+như chúng ta.
+
+145
+00:08:51,680 --> 00:08:53,400
+Chúng chỉ có một bảng chữ cái nhỏ hơn.
+
+146
+00:08:53,400 --> 00:08:57,100
+Máy tính chỉ có số 0 và 1.
+
+147
+00:08:57,100 --> 00:09:02,500
+trong khi con người chúng ta có số mũ của 10 ở mỗi hàng--
+
+148
+00:09:02,500 --> 00:09:06,810
+10 mũ không, 10 mũ một, 10 mũ hai, cho chúng ta số 110 và 100
+
+149
+00:09:06,810 --> 00:09:07,700
+tương ứng.
+
+150
+00:09:07,700 --> 00:09:12,140
+>> Vì máy tính chỉ có hai giá trị mà chúng có thể hiểu được, 0 và 1,
+
+151
+00:09:12,140 --> 00:09:16,600
+chúng phải sử dụng giá trị khác nhau trong các cột này, một, hai, bốn.
+
+152
+00:09:16,600 --> 00:09:20,480
+Và nếu chúng ta tiếp tục, 8, 16, 32, 64, và vv.
+
+153
+00:09:20,480 --> 00:09:24,220
+Nhưng quy luật và tinh thần là như nhau.
+
+154
+00:09:24,220 --> 00:09:27,340
+>> Vậy, theo logic này, ai có thể cho tôi biết số 1 được biểu diễn thế nào trong
+
+155
+00:09:27,340 --> 00:09:28,530
+hệ nhị phân binary?
+
+156
+00:09:28,530 --> 00:09:33,080
+Nếu bạn thậm chí còn chưa bao giờ nghĩ về điều này trước đây, trực giác của bạn đoán thế nào?
+
+157
+00:09:33,080 --> 00:09:33,777
+>> Sinh viên: 1
+
+158
+00:09:33,777 --> 00:09:34,610
+DAVID J. Malan: 1.
+
+159
+00:09:34,610 --> 00:09:35,660
+Chính xác.
+
+160
+00:09:35,660 --> 00:09:38,100
+Chúng ta chỉ cần 1 ở cột số 1 bởi vì các số 0
+
+161
+00:09:38,100 --> 00:09:40,610
+đủ để cho chúng ta không phải là 4 hoặc 2.
+
+162
+00:09:40,610 --> 00:09:42,440
+Vì vậy, 1 x 1 = 1
+
+163
+00:09:42,440 --> 00:09:43,940
+Bây giờ sẽ thú vị hơn chút đây.
+
+164
+00:09:43,940 --> 00:09:46,830
+Nếu tôi muốn biểu diễn trong hệ nhị phân số 2 -- nhưng,
+
+165
+00:09:46,830 --> 00:09:49,790
+một lần nữa, ngay cả khi bạn chưa bao giờ nói ngôn ngữ này trước đây,
+
+166
+00:09:49,790 --> 00:09:54,680
+làm thế nào để chúng ta biểu diễn trong hệ nhị phân giá trị mà con người chúng ta biết đó là số 2?
+
+167
+00:09:54,680 --> 00:09:55,570
+010
+
+168
+00:09:55,570 --> 00:09:57,620
+Chỉ cần đặt số 1 vào cột mà bạn muốn.
+
+169
+00:09:57,620 --> 00:09:59,560
+>> Bây giờ có lẽ đã khá dễ với các bạn rồi đấy
+
+170
+00:09:59,560 --> 00:10:02,950
+Vậy, nếu tôi muốn biểu diễn số 3 -- không có cột nào có số 3.
+
+171
+00:10:02,950 --> 00:10:06,770
+Vậy nên tôi có thể cộng các giá trị này vào bằng cách đặt số 1 ở đây.
+
+172
+00:10:06,770 --> 00:10:10,320
+Ta có 2 x 1 + 1 x 1 và tất nhiên là bằng 3.
+
+173
+00:10:10,320 --> 00:10:13,480
+>> Bây giờ mọi thứ trở nên thú vị hơn một chút khi mà các số 1 trở thành các số 0.
+
+174
+00:10:13,480 --> 00:10:15,480
+Và để thể hiện số 4, tôi có điều này.
+
+175
+00:10:15,480 --> 00:10:19,310
+Và nếu chúng ta tăng dần ở đây -- chúng ta có số 5.
+
+176
+00:10:19,310 --> 00:10:20,700
+Đây sẽ là sáu.
+
+177
+00:10:20,700 --> 00:10:22,100
+Đây sẽ là bảy.
+
+178
+00:10:22,100 --> 00:10:25,310
+>> Nhưng bây giờ tôi dường như vừa gặp phải một vấn đề.
+
+179
+00:10:25,310 --> 00:10:30,520
+Làm thế nào tôi có thể thể hiện số 8 -- là số tiếp theo.
+
+180
+00:10:30,520 --> 00:10:31,900
+Phải rồi, chúng ta cần một bit mới.
+
+181
+00:10:31,900 --> 00:10:33,899
+Có lẽ bạn đã nghe thấy từ này trước đây,
+
+182
+00:10:33,899 --> 00:10:37,380
+bit, là từ viết tắt của chữ số nhị phân, 0 hoặc 1.
+
+183
+00:10:37,380 --> 00:10:41,520
+>> Và thế là tình cờ tôi chỉ có ba bit như vậy ở đây.
+
+184
+00:10:41,520 --> 00:10:44,900
+Nhưng nếu tôi có không phải chỉ ba bit khác nhau, mà là bốn,
+
+185
+00:10:44,900 --> 00:10:47,250
+chắc chắn tôi có thể thể hiện số 8, 9, và sau đó
+
+186
+00:10:47,250 --> 00:10:49,400
+10, và thậm chí còn cao hơn nữa.
+
+187
+00:10:49,400 --> 00:10:52,140
+>> Nhưng câu hỏi đặt ra là làm thế nào chúng ta có thể
+
+188
+00:10:52,140 --> 00:10:54,540
+thể hiện những con số này.
+
+189
+00:10:54,540 --> 00:10:56,950
+Vẽ chúng lên slide ở đây là một chuyện,
+
+190
+00:10:56,950 --> 00:11:00,660
+nhưng làm thế nào để bạn thể hiện chúng nếu bạn là một thiết bị cơ khí?
+
+191
+00:11:00,660 --> 00:11:04,390
+Một chiếc máy tính đang làm gì để thể hiện các yếu tố đầu vào và đầu ra mà
+
+192
+00:11:04,390 --> 00:11:09,020
+về cơ bản xác định tính toán vào cuối ngày?
+
+193
+00:11:09,020 --> 00:11:12,090
+>> Vâng, một cái gì đó siêu đơn giản như thế này thì sao?
+
+194
+00:11:12,090 --> 00:11:13,200
+Nó chỉ là một bóng đèn.
+
+195
+00:11:13,200 --> 00:11:15,460
+Và tôi có thể kích hoạt bóng đèn này sáng lên
+
+196
+00:11:15,460 --> 00:11:17,920
+bằng cách truyền điện và cho phép các electron
+
+197
+00:11:17,920 --> 00:11:22,585
+chạy qua, làm thay đổi trạng thái hoặc giá trị của nó.
+
+198
+00:11:22,585 --> 00:11:24,460
+Ví dụ, đây là một đèn bàn học cũ
+
+199
+00:11:24,460 --> 00:11:27,250
+với một bóng đèn như vậy bên trong nó.
+
+200
+00:11:27,250 --> 00:11:29,940
+Và ngay bây giờ nó không thực sự làm bất cứ điều gì hữu ích.
+
+201
+00:11:29,940 --> 00:11:32,680
+Nhưng ngay sau khi tôi cắm nó vào một ổ cắm điện
+
+202
+00:11:32,680 --> 00:11:36,390
+và sau đó sử dụng công tắc này -- hoặc chúng ta thậm chí có thể gọi nó là một bóng bán dẫn
+
+203
+00:11:36,390 --> 00:11:39,970
+hoặc nghĩ về nó như vậy -- tôi bây giờ có thể thể hiện
+
+204
+00:11:39,970 --> 00:11:44,120
+giá trị này, khi mà các bóng đèn rõ ràng là tắt, hoặc giá trị này.
+
+205
+00:11:44,120 --> 00:11:46,060
+Giá trị này hay giá trị này.
+
+206
+00:11:46,060 --> 00:11:47,520
+Giá trị này và vv.
+
+207
+00:11:47,520 --> 00:11:51,220
+>> Vì vậy, bên trong của một máy tính có các phần cứng nhỏ hơn nhiều,
+
+208
+00:11:51,220 --> 00:11:52,970
+nhưng vào cuối ngày chỉ cần có
+
+209
+00:11:52,970 --> 00:11:55,360
+sử dụng electricity-- có lẽ chụp it--
+
+210
+00:11:55,360 --> 00:11:59,730
+và sau đó hoặc là giữ một cái gì đó hoặc giữ một cái gì đó đi.
+
+211
+00:11:59,730 --> 00:12:02,021
+Tất nhiên, đây không phải là đặc biệt thú vị để làm
+
+212
+00:12:02,021 --> 00:12:03,270
+chỉ với một bóng đèn duy nhất.
+
+213
+00:12:03,270 --> 00:12:06,726
+>> Trong thực tế, làm thế nào tôi có thể đếm cao trong hệ nhị phân với đèn bàn này đây?
+
+214
+00:12:06,726 --> 00:12:07,420
+>> Đung One.
+
+215
+00:12:07,420 --> 00:12:08,545
+>> DAVID J. Malan: Một, phải không?
+
+216
+00:12:08,545 --> 00:12:11,020
+Tôi cần đèn bàn nhiều hơn nếu tôi thực sự muốn đếm cao hơn.
+
+217
+00:12:11,020 --> 00:12:12,210
+Nhưng chúng ta có thể làm tốt hơn thế.
+
+218
+00:12:12,210 --> 00:12:14,460
+Bởi vì các bóng đèn mà chúng tôi đã đưa vào những điều này
+
+219
+00:12:14,460 --> 00:12:17,730
+là bóng đèn thực sự fancier hơn năm qua sẽ cho phép.
+
+220
+00:12:17,730 --> 00:12:20,310
+Và họ đang thực sự nối mạng bóng đèn.
+
+221
+00:12:20,310 --> 00:12:23,160
+Và chùm các công ty làm những việc này trong những ngày này.
+
+222
+00:12:23,160 --> 00:12:25,190
+>> Nhưng nó quay ra rằng điều này đặc biệt
+
+223
+00:12:25,190 --> 00:12:27,680
+đi kèm với một tính năng mà nhờ đó bạn có thể thay đổi màu sắc của nó.
+
+224
+00:12:27,680 --> 00:12:30,810
+Vì vậy, ví dụ, nếu bạn trang trí phòng ký túc xá của bạn
+
+225
+00:12:30,810 --> 00:12:33,200
+với một vài trong số những bóng đèn, tùy thuộc vào tâm trạng của bạn,
+
+226
+00:12:33,200 --> 00:12:35,366
+tùy thuộc vào người đi vào, tùy thuộc vào thời tiết,
+
+227
+00:12:35,366 --> 00:12:37,360
+tùy thuộc vào thời gian trong ngày, bạn có thể thực sự
+
+228
+00:12:37,360 --> 00:12:40,300
+thay đổi màu sắc của các bóng đèn trong phòng của bạn.
+
+229
+00:12:40,300 --> 00:12:43,740
+Và đó là bởi vì các bóng đèn và những người khác như nó có những gì
+
+230
+00:12:43,740 --> 00:12:48,010
+được gọi là một API, một giao diện lập trình ứng dụng, mà
+
+231
+00:12:48,010 --> 00:12:50,920
+là một chủ đề mà bạn sẽ được tốt quen thuộc với cuối học kỳ.
+
+232
+00:12:50,920 --> 00:12:53,710
+>> Và đây chỉ là một cách khó hiểu ưa thích của nói,
+
+233
+00:12:53,710 --> 00:12:57,570
+bạn có thể lập trình các bóng đèn để làm thầu của bạn.
+
+234
+00:12:57,570 --> 00:13:00,360
+Bạn có thể gửi tin nhắn cho họ giống như bạn, một con người,
+
+235
+00:13:00,360 --> 00:13:03,640
+có thể gửi tin nhắn đến một câu nói máy chủ web, cho tôi tin tức ngày hôm nay
+
+236
+00:13:03,640 --> 00:13:05,110
+hoặc cung cấp cho tôi email của tôi.
+
+237
+00:13:05,110 --> 00:13:08,010
+>> Bạn có thể gửi tin nhắn phức tạp hơn đối với các bóng đèn
+
+238
+00:13:08,010 --> 00:13:09,700
+để nói, bật và tắt.
+
+239
+00:13:09,700 --> 00:13:11,370
+Nhưng đó không phải là tất cả những gì thú vị.
+
+240
+00:13:11,370 --> 00:13:14,280
+Bạn có thể nói, bật đỏ, bật xanh, bật xanh,
+
+241
+00:13:14,280 --> 00:13:15,990
+tất cả với bóng đèn cùng.
+
+242
+00:13:15,990 --> 00:13:20,990
+Và bạn có thể thậm chí, với một chút hiểu biết nhiều hơn, nói, biến mình thành màu xanh
+
+243
+00:13:20,990 --> 00:13:24,710
+khi đó là một ngày ảm đạm bên ngoài, ví dụ.
+
+244
+00:13:24,710 --> 00:13:27,910
+Nó thực sự có thể vá vào một API thời tiết và tìm hiểu
+
+245
+00:13:27,910 --> 00:13:32,260
+những gì thời tiết, hoặc thời gian trong ngày, hoặc trigger khác như vậy.
+
+246
+00:13:32,260 --> 00:13:35,550
+>> Vì vậy, trên thực tế, hai nhân viên của CS50 của,
+
+247
+00:13:35,550 --> 00:13:38,827
+Dan Bradley và Ansel Duff đây, vui lòng mua sắm
+
+248
+00:13:38,827 --> 00:13:40,410
+chúng ta một bó toàn bộ các bóng đèn.
+
+249
+00:13:40,410 --> 00:13:42,910
+Và họ đã xây dựng bóng từng nhị phân đầu tiên của CS50,
+
+250
+00:13:42,910 --> 00:13:46,850
+nơi mà chúng tôi đã đại diện here-- với những magnets-- chút vui tươi
+
+251
+00:13:46,850 --> 00:13:49,780
+giữ chỗ khác nhau chúng ta ám chỉ một chút trước.
+
+252
+00:13:49,780 --> 00:13:52,572
+>> Vì vậy, theo cách trên đây là những nơi, hai, bốn.
+
+253
+00:13:52,572 --> 00:13:54,030
+Và chúng tôi không thấy cao hơn.
+
+254
+00:13:54,030 --> 00:13:55,613
+Nhưng, tất nhiên, họ là quyền hạn của hai.
+
+255
+00:13:55,613 --> 00:13:59,490
+Tám, 16, 32, 64, và 128.
+
+256
+00:13:59,490 --> 00:14:03,320
+Vì vậy, nếu bây giờ tôi muốn được một chút fancier hơn là sử dụng chuyển đổi trường học cũ này,
+
+257
+00:14:03,320 --> 00:14:07,310
+Tôi đã ở đây trên iPad này một giao diện đơn giản siêu
+
+258
+00:14:07,310 --> 00:14:10,440
+mà Dan Bradley, một cựu sinh viên và hiện đang dạy đồng,
+
+259
+00:14:10,440 --> 00:14:13,510
+lập trình bằng cách sử dụng một số HTML và JavaScript,
+
+260
+00:14:13,510 --> 00:14:15,685
+được đánh dấu và ngôn ngữ lập trình tương ứng.
+
+261
+00:14:15,685 --> 00:14:17,560
+Và có lẽ bạn có thể see-- ngay cả trong back--
+
+262
+00:14:17,560 --> 00:14:21,670
+có một cộng lớn và một điểm trừ lớn, cộng với một nút cho mỗi bóng đèn.
+
+263
+00:14:21,670 --> 00:14:25,740
+Và điều này sẽ cho phép tôi làm là, ví dụ, nhấp vào cộng
+
+264
+00:14:25,740 --> 00:14:28,250
+và bây giờ đại diện, tất nhiên, những gì số?
+
+265
+00:14:28,250 --> 00:14:28,750
+One.
+
+266
+00:14:28,750 --> 00:14:30,220
+Và tôi có thể nhấn nó một lần nữa.
+
+267
+00:14:30,220 --> 00:14:31,480
+Hai.
+
+268
+00:14:31,480 --> 00:14:32,800
+Ba.
+
+269
+00:14:32,800 --> 00:14:33,950
+Bốn.
+
+270
+00:14:33,950 --> 00:14:35,200
+Năm.
+
+271
+00:14:35,200 --> 00:14:36,360
+Sáu.
+
+272
+00:14:36,360 --> 00:14:36,880
+Bảy.
+
+273
+00:14:36,880 --> 00:14:40,740
+>> Và ở đây bây giờ chúng tôi có được tái đầu tư đó, nhưng chúng tôi có một chút thứ tư thời gian này,
+
+274
+00:14:40,740 --> 00:14:42,180
+vì vậy bây giờ chúng tôi có tám.
+
+275
+00:14:42,180 --> 00:14:44,000
+Vì vậy, chúng ta có thể làm điều này trong một thời gian.
+
+276
+00:14:44,000 --> 00:14:46,530
+Trong thực tế, như một sang một bên, làm thế nào có thể cao, chúng tôi đếm?
+
+277
+00:14:46,530 --> 00:14:48,318
+Bất cứ ai?
+
+278
+00:14:48,318 --> 00:14:49,270
+>> Đung 255.
+
+279
+00:14:49,270 --> 00:14:51,420
+>> DAVID J. Malan: 255, phải không?
+
+280
+00:14:51,420 --> 00:14:54,900
+Đừng lo lắng quá nhiều về toán cho doanh nghiệp, nhưng đó là một số lượng khá tốt.
+
+281
+00:14:54,900 --> 00:14:59,140
+Nhưng nó thực sự không bị ràng buộc chỉ có bao nhiêu mẩu thông tin,
+
+282
+00:14:59,140 --> 00:15:01,760
+giống như một lá thư, hoặc một hình ảnh mà chúng ta có thể đại diện.
+
+283
+00:15:01,760 --> 00:15:02,697
+>> Nhưng dù cho bây giờ.
+
+284
+00:15:02,697 --> 00:15:04,530
+Tôi sẽ đi trước và biến chúng tất cả ra.
+
+285
+00:15:04,530 --> 00:15:09,670
+Và nếu có thể, tôi muốn hỏi cho một tình nguyện viên, volunteer-- đầu tiên
+
+286
+00:15:09,670 --> 00:15:11,342
+oh, hello-- trên sân khấu.
+
+287
+00:15:11,342 --> 00:15:14,050
+Việc nắm bắt được bạn phải được thoải mái xuất hiện, vì bạn rõ ràng
+
+288
+00:15:14,050 --> 00:15:17,421
+đang ở phía trước của tất cả các bạn cùng lớp của bạn, cũng như trên internet.
+
+289
+00:15:17,421 --> 00:15:20,420
+Và hãy để tôi nhìn một chút ngoài the-- thế nào về đây trong màu áo trắng?
+
+290
+00:15:20,420 --> 00:15:20,920
+Và tay lên.
+
+291
+00:15:20,920 --> 00:15:22,071
+Nào lên.
+
+292
+00:15:22,071 --> 00:15:22,820
+Bạn tên là gì?
+
+293
+00:15:22,820 --> 00:15:23,760
+>> Đung Jackie.
+
+294
+00:15:23,760 --> 00:15:24,718
+>> DAVID J. Malan: Jackie.
+
+295
+00:15:24,718 --> 00:15:25,820
+Jackie, đi lên trên.
+
+296
+00:15:25,820 --> 00:15:29,820
+Vì vậy, một nút gọi là chế độ Game cũng có trên iPad này là gì.
+
+297
+00:15:29,820 --> 00:15:32,570
+Và chế độ Game này sẽ cho phép tôi để nhập vào
+
+298
+00:15:32,570 --> 00:15:35,780
+trước một số thập phân đặc biệt, những con số con người chúng ta
+
+299
+00:15:35,780 --> 00:15:36,760
+quen thuộc với.
+
+300
+00:15:36,760 --> 00:15:39,820
+Và sau đó bạn sẽ được thử thách ở đây để sử dụng các nút
+
+301
+00:15:39,820 --> 00:15:42,140
+trên một top-- cho mỗi bulbs--
+
+302
+00:15:42,140 --> 00:15:45,050
+để thực sự tìm ra các mô hình của bóng đèn
+
+303
+00:15:45,050 --> 00:15:46,970
+đại diện cho các số trong câu hỏi.
+
+304
+00:15:46,970 --> 00:15:47,790
+>> Và tôi xin lỗi, là những gì một lần nữa tên của bạn?
+
+305
+00:15:47,790 --> 00:15:48,250
+>> Đung Jackie.
+
+306
+00:15:48,250 --> 00:15:48,620
+>> DAVID J. Malan: Jackie.
+
+307
+00:15:48,620 --> 00:15:48,920
+Được rồi.
+
+308
+00:15:48,920 --> 00:15:49,740
+Thật tốt khi gặp bạn.
+
+309
+00:15:49,740 --> 00:15:54,580
+>> Vì vậy, hãy để tôi đi trước và chương trình cho thế giới nhìn thấy số lượng 15.
+
+310
+00:15:54,580 --> 00:15:56,360
+Chúng tôi sẽ giữ nó nhỏ ở đầu tiên ở đây.
+
+311
+00:15:56,360 --> 00:15:58,240
+Và tôi sẽ đi vào chế độ Game.
+
+312
+00:15:58,240 --> 00:16:01,160
+Và tôi sẽ phải xác định, cung cấp cho chúng tôi số 15.
+
+313
+00:16:01,160 --> 00:16:01,900
+>> OK.
+
+314
+00:16:01,900 --> 00:16:05,510
+Và bây giờ với tất cả mọi người watching-- nếu bạn muốn để có thể đứng cách này,
+
+315
+00:16:05,510 --> 00:16:09,970
+bởi vì nó sẽ xếp hàng up-- đi trước và chuyển đổi các nút tám dọc theo đầu trang
+
+316
+00:16:09,970 --> 00:16:12,530
+để biến bóng đèn hoặc tắt như bạn thấy phù hợp.
+
+317
+00:16:12,530 --> 00:16:13,530
+>> Đung OK.
+
+318
+00:16:13,530 --> 00:16:17,720
+>> DAVID J. Malan: Và không gian lận bằng cách nhấn cộng 15 lần.
+
+319
+00:16:17,720 --> 00:16:19,275
+Oh, chúng ta sẽ làm điều đó.
+
+320
+00:16:19,275 --> 00:16:20,069
+>> Đung Oh, chờ đợi.
+
+321
+00:16:20,069 --> 00:16:20,610
+Tôi rất xin lỗi.
+
+322
+00:16:20,610 --> 00:16:22,660
+>> DAVID J. Malan: Bạn cũng có thể bật các bóng đèn trên cá nhân
+
+323
+00:16:22,660 --> 00:16:24,076
+với mỗi một trong các nút trên đầu trang.
+
+324
+00:16:24,076 --> 00:16:24,844
+Đung Oh, OK.
+
+325
+00:16:24,844 --> 00:16:27,429
+Vì vậy, nó sẽ là like--
+
+326
+00:16:27,429 --> 00:16:28,220
+DAVID J. Malan: OK.
+
+327
+00:16:28,220 --> 00:16:29,100
+Vì vậy, bây giờ chúng tôi có tám.
+
+328
+00:16:29,100 --> 00:16:31,280
+Vì vậy, chúng ta hãy tạm dừng cho các đối tượng tham gia ở đây.
+
+329
+00:16:31,280 --> 00:16:34,300
+Số nào là Jackie hiện đang đại diện?
+
+330
+00:16:34,300 --> 00:16:34,800
+11.
+
+331
+00:16:34,800 --> 00:16:35,730
+Vì vậy, chúng tôi hầu như ở đó.
+
+332
+00:16:35,730 --> 00:16:38,360
+ 
+
+333
+00:16:38,360 --> 00:16:39,630
+Và tuyệt vời.
+
+334
+00:16:39,630 --> 00:16:41,487
+Vì vậy, chúng ta có chiến thắng đầu tiên của chúng tôi.
+
+335
+00:16:41,487 --> 00:16:42,445
+Xin chúc mừng.
+
+336
+00:16:42,445 --> 00:16:48,200
+>> Và chúng tôi nghĩ rằng chúng tôi có một số quà tặng tuyệt vời.
+
+337
+00:16:48,200 --> 00:16:50,860
+Nếu bạn muốn để có một phòng ký túc xá trong khuôn viên trường như vậy ở đây,
+
+338
+00:16:50,860 --> 00:16:56,126
+bạn mình có thể có một dự án cuối cùng sử dụng hiện nay API này, nhờ Jackie.
+
+339
+00:16:56,126 --> 00:16:57,050
+Vậy bây giờ--
+
+340
+00:16:57,050 --> 00:16:58,902
+>> [Vỗ tay]
+
+341
+00:16:58,902 --> 00:17:01,690
+ 
+
+342
+00:17:01,690 --> 00:17:04,839
+>> --Nếu Như chúng ta có thể, một trong nhiều ví dụ xung quanh về điều này.
+
+343
+00:17:04,839 --> 00:17:07,690
+Oh, bây giờ tất cả mọi người muốn một số bóng đèn.
+
+344
+00:17:07,690 --> 00:17:11,790
+Đối với cái gọi là phiên bản của hacker, chúng ta đang đi đến đoạn đường nối nó lên a-- oh,
+
+345
+00:17:11,790 --> 00:17:12,770
+yeah, không hứa hẹn.
+
+346
+00:17:12,770 --> 00:17:16,010
+Tôi nghĩ rằng bạn đang đến ngay bây giờ nếu bàn tay của bạn đang đi xuống.
+
+347
+00:17:16,010 --> 00:17:16,800
+Bạn tên là gì?
+
+348
+00:17:16,800 --> 00:17:17,424
+>> Đung Alex.
+
+349
+00:17:17,424 --> 00:17:19,440
+DAVID J. Malan: Alex, thôi qua đây.
+
+350
+00:17:19,440 --> 00:17:26,190
+Vì vậy, đối với Alex, chúng ta đang đi vào chương trình trong một số lớn hơn một chút.
+
+351
+00:17:26,190 --> 00:17:27,790
+Có lẽ để.
+
+352
+00:17:27,790 --> 00:17:29,110
+Số 50.
+
+353
+00:17:29,110 --> 00:17:29,744
+>> Đung OK.
+
+354
+00:17:29,744 --> 00:17:31,660
+DAVID J. Malan: Nhưng, như tôi said-- và có lẽ bạn
+
+355
+00:17:31,660 --> 00:17:33,580
+muốn đứng ở đây để các nút xếp hàng
+
+356
+00:17:33,580 --> 00:17:37,115
+như bạn sẽ expect-- nhưng tôi đã gọi đây là phiên bản hacker.
+
+357
+00:17:37,115 --> 00:17:47,125
+So-- may mắn!
+
+358
+00:17:47,125 --> 00:17:48,416
+>> [Cười]
+
+359
+00:17:48,416 --> 00:17:58,570
+ 
+
+360
+00:17:58,570 --> 00:18:02,050
+>> Bạn sẽ có thể tắt chúng đi nếu you-- OK.
+
+361
+00:18:02,050 --> 00:18:02,880
+Tuyệt vời.
+
+362
+00:18:02,880 --> 00:18:03,675
+Quá tuyệt vời.
+
+363
+00:18:03,675 --> 00:18:04,341
+Xin chúc mừng.
+
+364
+00:18:04,341 --> 00:18:08,730
+>> [Vỗ tay]
+
+365
+00:18:08,730 --> 00:18:10,355
+Tôi cho rằng tôi nên chú lên.
+
+366
+00:18:10,355 --> 00:18:11,830
+Xin chúc mừng Alex là tốt.
+
+367
+00:18:11,830 --> 00:18:12,330
+ĐƯỢC.
+
+368
+00:18:12,330 --> 00:18:15,550
+>> Vì vậy, các takeaway cuối cùng ở đây là hy vọng, thẳng thắn,
+
+369
+00:18:15,550 --> 00:18:18,109
+các simplicity-- sự đơn giản mà
+
+370
+00:18:18,109 --> 00:18:20,650
+bạn có thể nhận được một số bóng đèn đẹp, rõ ràng trong [không nghe được].
+
+371
+00:18:20,650 --> 00:18:23,000
+Nhưng họ đại diện, cuối cùng, những ý tưởng tương tự
+
+372
+00:18:23,000 --> 00:18:26,310
+mà con người chúng ta đã quá quen thuộc.
+
+373
+00:18:26,310 --> 00:18:28,660
+Vì vậy, những gì có thể bước tiếp theo là trong sự tiến triển
+
+374
+00:18:28,660 --> 00:18:30,920
+cố gắng làm một cái gì đó thú vị với dữ liệu
+
+375
+00:18:30,920 --> 00:18:34,950
+và đại diện cho yếu tố đầu vào mà không chỉ là con số mà có lẽ là chữ cái hoặc nhiều hơn?
+
+376
+00:18:34,950 --> 00:18:37,820
+>> Vâng, nó chỉ ra rằng thế giới máy tính, trong nhiều năm,
+
+377
+00:18:37,820 --> 00:18:43,300
+chỉ đơn giản là thông qua một tùy ý nhưng một tiêu chuẩn nhất quán rằng số bản đồ
+
+378
+00:18:43,300 --> 00:18:44,610
+các chữ của bảng chữ cái.
+
+379
+00:18:44,610 --> 00:18:47,120
+Ví dụ, đây là một đoạn trích từ bản đồ đó.
+
+380
+00:18:47,120 --> 00:18:48,350
+Nó được gọi là Ascii.
+
+381
+00:18:48,350 --> 00:18:53,220
+ASCII. Và đó chỉ đơn giản là một bảng mà các bản đồ letters-- hoa
+
+382
+00:18:53,220 --> 00:18:56,600
+trong này case-- đến thập phân số.
+
+383
+00:18:56,600 --> 00:18:57,890
+>> Nhưng ngụ ý những gì?
+
+384
+00:18:57,890 --> 00:19:01,090
+Vâng, nếu bạn thực sự muốn đại diện cho một cái gì đó giống như một email hoặc một số văn bản
+
+385
+00:19:01,090 --> 00:19:03,310
+trên một trang web, bạn rõ ràng là muốn hiển thị
+
+386
+00:19:03,310 --> 00:19:06,100
+các chữ cái của bảng chữ cái của con người, không phải số.
+
+387
+00:19:06,100 --> 00:19:09,140
+Vì vậy, tùy thuộc vào bối cảnh của chương trình
+
+388
+00:19:09,140 --> 00:19:12,600
+mà người dùng đang sử dụng, nếu nó là một trình duyệt web hoặc email client,
+
+389
+00:19:12,600 --> 00:19:16,090
+số chắc chắn có thể được hiểu là chữ cái.
+
+390
+00:19:16,090 --> 00:19:20,290
+Đó là để nói, mô hình của các bit có thể dễ dàng được giải thích như là chữ cái.
+
+391
+00:19:20,290 --> 00:19:24,700
+>> Và vì vậy những gì chúng ta có thể có được chữ A phúc
+
+392
+00:19:24,700 --> 00:19:28,410
+đại diện là 65, B được biểu diễn như là 66.
+
+393
+00:19:28,410 --> 00:19:30,900
+Vì vậy, nếu chúng ta có một từ siêu ngắn, giống như hi,
+
+394
+00:19:30,900 --> 00:19:35,740
+những gì một máy tính cuối cùng sẽ lưu trữ trong hệ thập phân, nhưng thực sự trong hệ nhị phân,
+
+395
+00:19:35,740 --> 00:19:40,070
+sử dụng một số chuỗi các bit, tận dụng một chút về điện một cách nào đó,
+
+396
+00:19:40,070 --> 00:19:44,010
+sẽ là hai con số 72 và 73.
+
+397
+00:19:44,010 --> 00:19:46,780
+>> Tuy nhiên, kiểu bit đại diện cho các giá trị đó.
+
+398
+00:19:46,780 --> 00:19:49,820
+Vì vậy, những sau đó là làm thế nào chúng ta có thể đại diện cho yếu tố đầu vào và đầu ra của chúng tôi.
+
+399
+00:19:49,820 --> 00:19:52,630
+Và nó đủ để nói, chúng ta có thể làm đại diện phức tạp hơn
+
+400
+00:19:52,630 --> 00:19:56,450
+cuối cùng với những thứ như đồ họa, video, âm nhạc, và nhiều hơn nữa
+
+401
+00:19:56,450 --> 00:19:58,190
+như chúng ta sẽ thấy sau này hạn này.
+
+402
+00:19:58,190 --> 00:20:00,630
+>> Vì vậy, đó chỉ là lá sau đó các thuật toán, các bộ
+
+403
+00:20:00,630 --> 00:20:03,490
+các hướng dẫn mà chúng ta đang giải quyết vấn đề thực tế.
+
+404
+00:20:03,490 --> 00:20:05,820
+Chúng tôi đang đi qua trong đầu vào cho thuật toán.
+
+405
+00:20:05,820 --> 00:20:09,630
+Và những thuật toán là sản xuất đầu ra, kết quả đầu ra hy vọng đúng
+
+406
+00:20:09,630 --> 00:20:14,160
+và hy vọng, quá, hiệu quả thu thập được kết quả đầu ra.
+
+407
+00:20:14,160 --> 00:20:16,890
+Nói cách khác, nó là một điều để thực hiện một cái gì đó một cách chính xác.
+
+408
+00:20:16,890 --> 00:20:20,790
+Đó là một điều để thực hiện một cái gì đó tốt hay hiệu quả.
+
+409
+00:20:20,790 --> 00:20:23,690
+>> Ví dụ, một cuộc biểu tình mà chúng tôi thích trong khóa học
+
+410
+00:20:23,690 --> 00:20:24,460
+là thế này.
+
+411
+00:20:24,460 --> 00:20:26,345
+Nhưng những điều này đang nhận được ngày càng khó tìm.
+
+412
+00:20:26,345 --> 00:20:28,930
+Nhưng điều này thực sự là một cuốn sách điện thoại trường học cũ, bên trong đó
+
+413
+00:20:28,930 --> 00:20:32,580
+1.000 trang cộng với các tên và số điện thoại.
+
+414
+00:20:32,580 --> 00:20:34,830
+Và nếu tôi muốn nhìn lên một ai đó trong sổ điện thoại này,
+
+415
+00:20:34,830 --> 00:20:38,640
+Tôi chỉ có thể làm một thuật toán rất ngây thơ.
+
+416
+00:20:38,640 --> 00:20:42,150
+Tôi có thể mở ra trang đầu tiên, và tôi có thể bắt đầu tìm kiếm, nói rằng, một người nào đó
+
+417
+00:20:42,150 --> 00:20:43,130
+tên là Mike Smith.
+
+418
+00:20:43,130 --> 00:20:46,160
+Và nếu anh ta không phải trên trang đầu tiên, tôi tiến vào thứ hai,
+
+419
+00:20:46,160 --> 00:20:49,120
+và sau đó đến thứ ba, và sau đó đến thứ tư, và vân vân,
+
+420
+00:20:49,120 --> 00:20:51,430
+cho đến khi cuối cùng tôi đã tìm thấy Mike Smith.
+
+421
+00:20:51,430 --> 00:20:53,010
+>> Bây giờ là thuật toán mà chính xác?
+
+422
+00:20:53,010 --> 00:20:53,896
+>> Đung thê.
+
+423
+00:20:53,896 --> 00:20:54,248
+>> DAVID J. Malan: Yeah.
+
+424
+00:20:54,248 --> 00:20:56,039
+Nếu anh ở trong đó, tôi sẽ bắt được anh.
+
+425
+00:20:56,039 --> 00:20:58,820
+Nhưng nó cho là không hiệu quả, chắc chắn không nhanh,
+
+426
+00:20:58,820 --> 00:21:01,200
+bởi vì, chúa ơi, tại sao tôi lại lãng phí thời gian của tôi lật
+
+427
+00:21:01,200 --> 00:21:04,500
+qua tất cả các trang này khi tôi chắc chắn có thể làm điều này thể chất nhanh hơn?
+
+428
+00:21:04,500 --> 00:21:08,210
+>> Vâng, tối ưu hóa một chút, có thể nói, có thể không phải là một trang tại một thời gian,
+
+429
+00:21:08,210 --> 00:21:11,610
+nhưng hai, bốn, sáu, tám, 10.
+
+430
+00:21:11,610 --> 00:21:12,725
+Vẫn còn chính xác?
+
+431
+00:21:12,725 --> 00:21:14,030
+>> Đung số
+
+432
+00:21:14,030 --> 00:21:17,040
+>> DAVID J. Malan: Vì vậy, nếu tôi không có ví dụ bỏ qua Mike Smith.
+
+433
+00:21:17,040 --> 00:21:20,530
+Nhưng chừng nào tôi lại đạp một trang, nếu tôi bị vọt lố anh,
+
+434
+00:21:20,530 --> 00:21:25,240
+có lẽ chúng ta có thể chính xác những gì nếu không có thể là một Gotcha.
+
+435
+00:21:25,240 --> 00:21:26,020
+>> Nhưng là nó tốt hơn?
+
+436
+00:21:26,020 --> 00:21:27,469
+Là nó nhanh hơn?
+
+437
+00:21:27,469 --> 00:21:28,010
+Ý tôi là, yeah.
+
+438
+00:21:28,010 --> 00:21:30,950
+Đó là nghĩa đen nhanh gấp hai lần nếu tôi làm hai trang cùng một thời điểm.
+
+439
+00:21:30,950 --> 00:21:35,720
+Vì vậy, nếu tôi ban đầu đã có 1.000 trang, bây giờ tôi chỉ cần lật 500 lần,
+
+440
+00:21:35,720 --> 00:21:39,429
+không đầy đủ 1.000 trang để có được khả năng trong trường hợp xấu nhất
+
+441
+00:21:39,429 --> 00:21:41,220
+đến cuối của cuốn sách điện thoại, nơi mà một người nào đó
+
+442
+00:21:41,220 --> 00:21:44,380
+như Mike Smith hoặc một ai đó với một tên sau này thực sự có thể được.
+
+443
+00:21:44,380 --> 00:21:46,540
+>> Nhưng, tất nhiên, con người chúng ta chắc chắn không phải là
+
+444
+00:21:46,540 --> 00:21:49,250
+sẽ được làm điều đó, chắc chắn không phải tại thời điểm này trong cuộc sống của chúng tôi.
+
+445
+00:21:49,250 --> 00:21:51,454
+Những gì được một con người hợp lý có khả năng sẽ làm gì?
+
+446
+00:21:51,454 --> 00:21:52,870
+Đung Đi thẳng đến The9 của S.
+
+447
+00:21:52,870 --> 00:21:53,860
+DAVID J. Malan: Đi thẳng đến của S?
+
+448
+00:21:53,860 --> 00:21:55,563
+Làm thế nào để tôi đi thẳng đến của S?
+
+449
+00:21:55,563 --> 00:21:57,342
+>> Đung Rip nó trong một nửa.
+
+450
+00:21:57,342 --> 00:21:59,050
+DAVID J. Malan: Vâng, không có đánh dấu.
+
+451
+00:21:59,050 --> 00:22:02,116
+Vì vậy, có, nếu có thực sự là một nhãn hiệu hoặc một tab dính cho S,
+
+452
+00:22:02,116 --> 00:22:03,240
+chúng ta nên nhảy ngay tại đó.
+
+453
+00:22:03,240 --> 00:22:05,420
+Nhưng đó là vô thưởng vô phạt.
+
+454
+00:22:05,420 --> 00:22:08,480
+Vì vậy, tốt nhất tôi có thể làm là khoảng đến S phần hoặc có thể xấp xỉ
+
+455
+00:22:08,480 --> 00:22:09,650
+vào trung lộ.
+
+456
+00:22:09,650 --> 00:22:12,110
+Nhưng now-- takeaway chính và trực giác
+
+457
+00:22:12,110 --> 00:22:14,430
+mà bạn đã đưa cho các cấp trong nhiều năm probably--
+
+458
+00:22:14,430 --> 00:22:17,103
+là những gì bạn đã biết về vấn đề này?
+
+459
+00:22:17,103 --> 00:22:19,320
+>> Đung [Không nghe thấy]
+
+460
+00:22:19,320 --> 00:22:22,290
+>> DAVID J. Malan: Mike Smith là chắc chắn không phải một nửa của vấn đề
+
+461
+00:22:22,290 --> 00:22:25,600
+vì Smith đưa ra sau khi các trung đó là khoảng phần M,
+
+462
+00:22:25,600 --> 00:22:26,510
+nó có vẻ là.
+
+463
+00:22:26,510 --> 00:22:30,340
+Vì vậy, như bạn có thể đã thấy tại Visitas, chúng tôi bây giờ có thể theo nghĩa đen
+
+464
+00:22:30,340 --> 00:22:31,737
+xé vấn đề này trong một nửa.
+
+465
+00:22:31,737 --> 00:22:32,320
+Đung Woo!
+
+466
+00:22:32,320 --> 00:22:33,690
+DAVID J. Malan: Nó nhận được dễ dàng hơn và dễ dàng hơn.
+
+467
+00:22:33,690 --> 00:22:34,666
+[Vỗ tay]
+
+468
+00:22:34,666 --> 00:22:36,618
+Của bạn đó.
+
+469
+00:22:36,618 --> 00:22:39,060
+[Cười]
+
+470
+00:22:39,060 --> 00:22:41,870
+Và bây giờ tôi về cơ bản có cùng một vấn đề,
+
+471
+00:22:41,870 --> 00:22:43,866
+nhưng đó là nghĩa đen nửa là lớn.
+
+472
+00:22:43,866 --> 00:22:45,240
+Tôi vẫn đang tìm kiếm Mike Smith.
+
+473
+00:22:45,240 --> 00:22:47,950
+Và tôi dám khẳng định, tôi vẫn có thể tìm anh ấy trong cùng một cách,
+
+474
+00:22:47,950 --> 00:22:51,200
+tách các vấn đề trong một nửa nữa, rách lại lỗi
+
+475
+00:22:51,200 --> 00:22:54,140
+một nửa, mà bây giờ bỏ tôi lại với một vấn đề một phần tư kích thước,
+
+476
+00:22:54,140 --> 00:22:58,710
+ném mạnh nửa đi, và lặp lại quá trình này một lần nữa và một lần nữa
+
+477
+00:22:58,710 --> 00:23:01,150
+và một lần nữa, liếc xuống ở mỗi điểm để xem
+
+478
+00:23:01,150 --> 00:23:03,400
+nếu Mike Smith là trên các trang trong câu hỏi.
+
+479
+00:23:03,400 --> 00:23:06,190
+>> Bây giờ nếu tôi làm điều này đúng, cuối cùng tôi sẽ thấy mình
+
+480
+00:23:06,190 --> 00:23:11,085
+chỉ với một trang mà Mike Smith là nếu anh ta thực sự trong sổ điện thoại.
+
+481
+00:23:11,085 --> 00:23:13,510
+Tất nhiên, tôi không bao giờ có thể gọi Mike nữa.
+
+482
+00:23:13,510 --> 00:23:18,800
+Nhưng điểm ở đây là nếu chúng ta bắt đầu với 1.000 trang, thuật toán đầu tiên của tôi,
+
+483
+00:23:18,800 --> 00:23:21,620
+lật trang, có lẽ 1000 times-- chắc chắn ít hơn bởi vì nó
+
+484
+00:23:21,620 --> 00:23:26,430
+một tên S và không phải là một tên Z, nhưng có đến 1.000 trang có khả năng.
+
+485
+00:23:26,430 --> 00:23:27,590
+>> Thuật toán thứ hai, tốt hơn.
+
+486
+00:23:27,590 --> 00:23:28,480
+500 trang.
+
+487
+00:23:28,480 --> 00:23:31,230
+Thuật toán thứ ba, mặc dù, có bao nhiêu bước sẽ nó
+
+488
+00:23:31,230 --> 00:23:35,520
+lấy để phân chia một cuốn sách điện thoại 1.000 trang trong nửa như thế?
+
+489
+00:23:35,520 --> 00:23:37,000
+10, cho hay phải mất.
+
+490
+00:23:37,000 --> 00:23:40,770
+Vì vậy, chỉ bằng cách lật qua cuốn sách điện thoại, lặn và chinh phục,
+
+491
+00:23:40,770 --> 00:23:46,130
+vậy để nói chuyện, 10 lần, tôi sẽ thực hiện theo cách của tôi xuống chỉ là một trang duy nhất.
+
+492
+00:23:46,130 --> 00:23:48,880
+>> Và như vậy chúng ta có thể nắm bắt trực giác này bây giờ là một chút đồ họa
+
+493
+00:23:48,880 --> 00:23:51,320
+nếu bạn chỉ cần xem xét đồ thị siêu đơn giản này.
+
+494
+00:23:51,320 --> 00:23:55,470
+Chúng tôi đang ở trên trục x, hoặc trục ngang, là kích thước của vấn đề của tôi,
+
+495
+00:23:55,470 --> 00:23:57,100
+số trang trong sổ điện thoại.
+
+496
+00:23:57,100 --> 00:23:59,040
+Và các nhà khoa học máy tính thường thích gọi
+
+497
+00:23:59,040 --> 00:24:02,180
+kích thước của một vấn đề n, trong đó n là chỉ số biến
+
+498
+00:24:02,180 --> 00:24:04,310
+represents-- trong số case-- này của trang.
+
+499
+00:24:04,310 --> 00:24:07,412
+>> Các theo chiều dọc, hoặc trục y, đây là có được thời gian để giải quyết,
+
+500
+00:24:07,412 --> 00:24:09,870
+có lẽ số lượng các trang biến, có lẽ số giây
+
+501
+00:24:09,870 --> 00:24:11,960
+hoặc vài phút, bất cứ đơn vị của bạn là thước đo.
+
+502
+00:24:11,960 --> 00:24:14,337
+Và do đó, dòng màu đỏ này đại diện cho các thuật toán đầu tiên,
+
+503
+00:24:14,337 --> 00:24:16,670
+bởi vì có một 1-1 mối quan hệ giữa số
+
+504
+00:24:16,670 --> 00:24:18,880
+trang và số lượng thời gian cần.
+
+505
+00:24:18,880 --> 00:24:22,240
+>> Nếu Verizon tăng gấp đôi số lượng các trang trong cuốn sách điện thoại vào năm tới,
+
+506
+00:24:22,240 --> 00:24:24,590
+chạy của tôi time-- thời gian cần thiết để thực hiện
+
+507
+00:24:24,590 --> 00:24:27,610
+rằng algorithm-- đầu tiên tăng gấp đôi trong trường hợp xấu nhất.
+
+508
+00:24:27,610 --> 00:24:30,690
+Nhưng các thuật toán thứ hai, nơi tôi đang lật hai,
+
+509
+00:24:30,690 --> 00:24:33,650
+đòi hỏi ít thời gian hơn cho một vấn đề kích thước nhất định.
+
+510
+00:24:33,650 --> 00:24:36,090
+Vì vậy, nếu tôi có thông báo này nhiều trang here--
+
+511
+00:24:36,090 --> 00:24:38,870
+rằng dòng màu vàng cho thấy ít thời gian để giải quyết.
+
+512
+00:24:38,870 --> 00:24:42,490
+Và quả thực, nó đại diện, chúng ta sẽ nói, n qua hai.
+
+513
+00:24:42,490 --> 00:24:47,717
+>> Nhưng hình dạng của đường cong thứ ba và cuối cùng sẽ trông giống như là những gì?
+
+514
+00:24:47,717 --> 00:24:50,800
+Yeah, nó thực sự sẽ look-- Tôi không biết những gì bạn đã đi để nói.
+
+515
+00:24:50,800 --> 00:24:52,300
+Nhưng chúng ta hãy xem những gì bạn đã đi để nói.
+
+516
+00:24:52,300 --> 00:24:53,280
+>> Đung Như thế.
+
+517
+00:24:53,280 --> 00:24:57,060
+>> DAVID J. Malan: Nó sẽ trông như thế này, một exactly-- slope-- logarit
+
+518
+00:24:57,060 --> 00:24:59,770
+nhờ đó mà bạn có độ dốc tò mò này.
+
+519
+00:24:59,770 --> 00:25:01,235
+Nó không còn là một đường thẳng.
+
+520
+00:25:01,235 --> 00:25:05,000
+Và những gì là hấp dẫn về điều đó là mặc dù đồ thị bây giờ cắt đứt,
+
+521
+00:25:05,000 --> 00:25:07,790
+bạn có thể ngoại suy trong tâm trí của bạn rằng dòng màu xanh lá cây không
+
+522
+00:25:07,790 --> 00:25:10,060
+sẽ làm tăng chiều cao cả mà nhiều
+
+523
+00:25:10,060 --> 00:25:13,500
+khi bạn tiến xa hơn xuống trục ngang.
+
+524
+00:25:13,500 --> 00:25:15,890
+>> Thật vậy, Verizon, ví dụ, có thể tăng gấp đôi
+
+525
+00:25:15,890 --> 00:25:19,100
+số lượng các trang trong cuốn sách điện thoại giữa năm nay và năm tới
+
+526
+00:25:19,100 --> 00:25:22,140
+từ 1000 đến 2000 trang, nhưng không có việc lớn.
+
+527
+00:25:22,140 --> 00:25:24,960
+Với điều này thứ ba và cuối cùng, có một thuật toán trực quan
+
+528
+00:25:24,960 --> 00:25:26,209
+phân chia và chinh phục.
+
+529
+00:25:26,209 --> 00:25:29,000
+Nó sẽ đưa tôi thêm bao nhiêu bước vào năm tới để tìm một ai đó
+
+530
+00:25:29,000 --> 00:25:29,700
+thích Mike Smith?
+
+531
+00:25:29,700 --> 00:25:30,560
+>> Đung One.
+
+532
+00:25:30,560 --> 00:25:31,230
+>> DAVID J. Malan: Có chỉ là một.
+
+533
+00:25:31,230 --> 00:25:34,430
+Và họ có thể tăng gấp bốn lần nó, nó sẽ đưa tôi chỉ cần hai bước nữa
+
+534
+00:25:34,430 --> 00:25:35,210
+và kể từ đó trở đi.
+
+535
+00:25:35,210 --> 00:25:38,730
+Và do đó, đây là minh chứng cho chỉ cách một số thiết kế cẩn thận
+
+536
+00:25:38,730 --> 00:25:42,437
+và một số đánh giá cao cho những đầu vào của bạn là có thể làm tốt hơn.
+
+537
+00:25:42,437 --> 00:25:44,270
+Bây giờ chúng tôi đang lừa dối một chút trong ý nghĩa
+
+538
+00:25:44,270 --> 00:25:46,350
+rằng chúng tôi đang thúc đẩy một giả định.
+
+539
+00:25:46,350 --> 00:25:48,500
+Giả định của tôi về cuốn sách điện thoại của chúng tôi là gì
+
+540
+00:25:48,500 --> 00:25:52,720
+đó cho phép tôi để chia và chinh phục theo cách trực quan và vẫn còn chính xác này?
+
+541
+00:25:52,720 --> 00:25:53,705
+>> Đung [Không nghe thấy]
+
+542
+00:25:53,705 --> 00:25:54,580
+DAVID J. Malan: Yeah.
+
+543
+00:25:54,580 --> 00:25:55,440
+Vì vậy, nó đã được đặt hàng.
+
+544
+00:25:55,440 --> 00:25:57,392
+Nó được chữ cái của các công ty sách điện thoại.
+
+545
+00:25:57,392 --> 00:26:00,100
+Nếu nó ở trong thứ tự ngẫu nhiên, đó sẽ là một địa ngục của một cuốn sách điện thoại,
+
+546
+00:26:00,100 --> 00:26:02,850
+nhưng chắc chắn nó sẽ không thích hợp với các thuật toán
+
+547
+00:26:02,850 --> 00:26:05,950
+Tôi đã sử dụng, bởi vì bạn sẽ không bao giờ chỉ xảy ra trên Mike Smith
+
+548
+00:26:05,950 --> 00:26:09,210
+nếu bạn giữ phân chia trong một nửa trong đó cách tình cờ.
+
+549
+00:26:09,210 --> 00:26:12,060
+>> Vì vậy, bây giờ chúng ta chính thức hóa những gì là rõ ràng trực quan.
+
+550
+00:26:12,060 --> 00:26:13,950
+Vì vậy, một cái gì đó gọi là mã giả là nơi mà chúng ta sẽ
+
+551
+00:26:13,950 --> 00:26:15,780
+bắt đầu một số vấn đề ban đầu của chúng tôi.
+
+552
+00:26:15,780 --> 00:26:20,410
+Và đây là một cách chung chung mô tả một thuật toán hoặc một chương trình máy tính,
+
+553
+00:26:20,410 --> 00:26:24,150
+không sử dụng C, hoặc C ++, hoặc Java, hoặc bất kỳ ngôn ngữ cụ thể,
+
+554
+00:26:24,150 --> 00:26:27,430
+nhưng chỉ sử dụng tiếng Anh, mà bất kỳ con người có thể quen.
+
+555
+00:26:27,430 --> 00:26:31,220
+>> Và chúng ta có thể viết mã giả cho vấn đề này như sau.
+
+556
+00:26:31,220 --> 00:26:33,520
+Bước một, nhấc cuốn sách điện thoại.
+
+557
+00:26:33,520 --> 00:26:35,840
+Bước hai, mở cửa đến giữa cuốn sách điện thoại.
+
+558
+00:26:35,840 --> 00:26:37,730
+Bước ba, nhìn vào những cái tên.
+
+559
+00:26:37,730 --> 00:26:40,630
+Bước bốn, nếu Smith là một trong names--
+
+560
+00:26:40,630 --> 00:26:42,960
+>> Và bây giờ điều này là một cấu trúc thú vị.
+
+561
+00:26:42,960 --> 00:26:44,290
+Đó là một điểm quyết định.
+
+562
+00:26:44,290 --> 00:26:47,920
+Đó là một ngã ba đường, nếu bạn sẽ, một chi nhánh, do đó, để nói chuyện.
+
+563
+00:26:47,920 --> 00:26:50,810
+Vì vậy, tôi sẽ thụt chỉ theo quy ước step--
+
+564
+00:26:50,810 --> 00:26:53,950
+không five-- mà là để nói, tôi sẽ gọi cho Mike.
+
+565
+00:26:53,950 --> 00:26:57,290
+Vì vậy, thụt đầu dòng này, Công ước nhân hoàn toàn tự tiện, nhưng nó
+
+566
+00:26:57,290 --> 00:27:01,160
+chỉ đơn giản có nghĩa là để truyền đạt ngữ nghĩa rằng nếu Smith là một trong những cái tên,
+
+567
+00:27:01,160 --> 00:27:03,310
+sau đó tôi nên gọi Mike.
+
+568
+00:27:03,310 --> 00:27:06,630
+>> Trong khi đó ở bước sáu, nhận thấy rằng các nhân thụt ra đi.
+
+569
+00:27:06,630 --> 00:27:10,980
+Vì vậy, khác là ngã ba khác trên đường, con đường khác tôi có thể đi du lịch.
+
+570
+00:27:10,980 --> 00:27:14,130
+Vì vậy, nếu người nào khác Smith là trước đó trong cuốn sách, những gì
+
+571
+00:27:14,130 --> 00:27:16,964
+Bước tiếp theo của tôi có lẽ sẽ ở đây?
+
+572
+00:27:16,964 --> 00:27:18,380
+Đung Bạn đi về phía bên trái.
+
+573
+00:27:18,380 --> 00:27:21,004
+DAVID J. Malan: Yeah, vì vậy hãy vào nửa bên trái của danh bạ điện thoại.
+
+574
+00:27:21,004 --> 00:27:24,140
+Vứt bỏ nửa bên phải nếu Smith là trước đó trong cuốn sách.
+
+575
+00:27:24,140 --> 00:27:27,140
+Vì vậy, mở đến giữa nửa bên trái của cuốn sách.
+
+576
+00:27:27,140 --> 00:27:30,240
+>> Và sau đó bước tám, đi xếp hàng ba.
+
+577
+00:27:30,240 --> 00:27:34,520
+Và đây là một vòng lặp tò mò tôi lôi kéo, một đệ quy như vậy để nói chuyện.
+
+578
+00:27:34,520 --> 00:27:35,990
+Nhưng thêm vào đó trong tương lai.
+
+579
+00:27:35,990 --> 00:27:39,590
+>> Tôi đang sử dụng cùng một thuật toán của tôi, cùng một mã giả của tôi,
+
+580
+00:27:39,590 --> 00:27:43,020
+để giải quyết cùng một vấn đề một lần nữa bởi vì điều duy nhất đó là thay đổi
+
+581
+00:27:43,020 --> 00:27:46,550
+là kích thước của vấn đề, không phải mục tiêu của tôi, và không phải là người
+
+582
+00:27:46,550 --> 00:27:47,340
+Tôi đang tìm kiếm.
+
+583
+00:27:47,340 --> 00:27:51,610
+Vì vậy, tôi có thể tái sử dụng các thuật toán mà tôi đã xác định.
+
+584
+00:27:51,610 --> 00:27:53,580
+>> Khác nếu Smith là sau này trong book-- có lẽ bạn
+
+585
+00:27:53,580 --> 00:27:56,200
+guess-- mở đến giữa nửa bên phải của cuốn sách.
+
+586
+00:27:56,200 --> 00:27:58,350
+Và một lần nữa, hãy để dòng ba.
+
+587
+00:27:58,350 --> 00:28:01,480
+Else-- dòng cuối cùng trong chương trình này sẽ là những gì?
+
+588
+00:28:01,480 --> 00:28:03,580
+Nếu anh ta không nằm trong số những cái tên trên trang tôi
+
+589
+00:28:03,580 --> 00:28:06,870
+trên, nếu anh ấy không phải trước đó trong cuốn sách, và ông là không muộn
+
+590
+00:28:06,870 --> 00:28:09,899
+trong cuốn sách, những gì tôi biết là sự thật về Mike Smith bây giờ?
+
+591
+00:28:09,899 --> 00:28:11,190
+Đung Ông ấy không phải trong cuốn sách.
+
+592
+00:28:11,190 --> 00:28:12,731
+DAVID J. Malan: Anh ấy không phải trong cuốn sách.
+
+593
+00:28:12,731 --> 00:28:16,040
+Vì vậy, tốt nhất tôi có thể làm là chỉ cần bỏ và ngăn chặn chương trình này.
+
+594
+00:28:16,040 --> 00:28:16,540
+Được rồi.
+
+595
+00:28:16,540 --> 00:28:20,350
+Vì vậy, tại thời điểm này, chúng ta hãy một tour du lịch nhanh chóng của một số những gì đang chờ đợi.
+
+596
+00:28:20,350 --> 00:28:23,620
+Và trong thực tế, tôi đã tham gia ở đây bởi một số nhân viên CS50.
+
+597
+00:28:23,620 --> 00:28:26,940
+Nếu những người này đều có thể tham gia cùng tôi lên đây trên sân khấu.
+
+598
+00:28:26,940 --> 00:28:28,900
+>> [Vỗ tay]
+
+599
+00:28:28,900 --> 00:28:35,280
+ 
+
+600
+00:28:35,280 --> 00:28:38,170
+>> Tâm trí bạn, đây chỉ là một tập hợp con của nhân viên CS50,
+
+601
+00:28:38,170 --> 00:28:42,380
+vì mỗi năm chúng tôi có gần 100 nhân viên trong vai trò trợ lý của khóa học,
+
+602
+00:28:42,380 --> 00:28:44,410
+giảng dạy nghiên cứu sinh, và nhiều hơn nữa.
+
+603
+00:28:44,410 --> 00:28:45,700
+Nào lên.
+
+604
+00:28:45,700 --> 00:28:48,820
+Vì vậy, họ sẽ tham gia ở đây lúng túng trong chỉ một khoảnh khắc
+
+605
+00:28:48,820 --> 00:28:54,230
+khi chúng tôi cung cấp cho một tour du lịch cơn lốc của những gì bạn nên mong đợi ở đây trong khóa học.
+
+606
+00:28:54,230 --> 00:28:59,640
+>> Vì vậy, đầu tiên và trước hết, chúng ta có SAT / UNS là lựa chọn chấm điểm trong khóa học.
+
+607
+00:28:59,640 --> 00:29:03,180
+Điều này có nghĩa là cố tình là một lựa chọn đó
+
+608
+00:29:03,180 --> 00:29:05,570
+nếu bạn là một chút không thoải mái tại được trong khóa học,
+
+609
+00:29:05,570 --> 00:29:09,390
+và bạn không sợ failure-- ngay cả khi thẳng thắn thất bại có nghĩa làm tổn thương GPA của bạn,
+
+610
+00:29:09,390 --> 00:29:13,180
+nhận được một B và không phải là một A-- đó chính xác là những gì, chắc chắn cho một cửa ngõ
+
+611
+00:29:13,180 --> 00:29:15,750
+Tất nhiên như CS50 và giới thiệu các khóa học khác,
+
+612
+00:29:15,750 --> 00:29:17,540
+tùy chọn phân loại này là có nghĩa là để cho phép.
+
+613
+00:29:17,540 --> 00:29:19,930
+>> Tôi hết lòng khuyến khích students-- đặc biệt
+
+614
+00:29:19,930 --> 00:29:23,090
+nếu trên fence-- để bắt đầu quá trình SAT / UNS, thậm chí còn SAT / UNS.
+
+615
+00:29:23,090 --> 00:29:27,310
+Nhưng bạn chắc chắn có thể chuyển sang một cấp thư của ngày thứ Hai thứ năm trong kỳ.
+
+616
+00:29:27,310 --> 00:29:31,560
+>> Thành thật mà nói, trở lại khi tôi còn là một sinh viên năm nhất vào năm 1995,
+
+617
+00:29:31,560 --> 00:29:34,630
+Bản thân tôi đã thậm chí không mất CS50 vì tôi đã không nhận được lên các dây thần kinh
+
+618
+00:29:34,630 --> 00:29:36,540
+để thực sự bước chân vào lớp học.
+
+619
+00:29:36,540 --> 00:29:40,020
+Nó dường như là một miền xa quá xa lạ với tôi và thực sự chỉ
+
+620
+00:29:40,020 --> 00:29:43,080
+cho những người bạn của tôi, thẳng thắn, những người đã được lập trình
+
+621
+00:29:43,080 --> 00:29:45,570
+vì họ là sáu hoặc có thể 10-năm-tuổi.
+
+622
+00:29:45,570 --> 00:29:48,640
+Và nó chỉ là vì tôi đã có thể mất CS50 trong ngày của tôi
+
+623
+00:29:48,640 --> 00:29:52,720
+trong phiên bản tương đương của SAT / UNS-- đạt / không trở lại trong day--
+
+624
+00:29:52,720 --> 00:29:53,850
+mà thậm chí tôi đã 50.
+
+625
+00:29:53,850 --> 00:29:57,440
+Và bằng cách này hay khác, tôi ở đây một lần nữa với bạn ngày hôm nay.
+
+626
+00:29:57,440 --> 00:30:00,690
+>> Bây giờ trong khi đó những gì khác mà bạn cần ghi nhớ về 50
+
+627
+00:30:00,690 --> 00:30:01,910
+ghi tên đăng ký đồng thời.
+
+628
+00:30:01,910 --> 00:30:03,785
+Trái ngược với những tin đồn rằng bạn có thể đã nghe nói,
+
+629
+00:30:03,785 --> 00:30:07,650
+bạn có thể, trên thực tế, đồng thời ghi danh CS50 và một lớp khác mà
+
+630
+00:30:07,650 --> 00:30:12,150
+đáp ứng ở cùng hoặc một thời gian chồng lên nhau như bài giảng của CS50 ngay tại đây.
+
+631
+00:30:12,150 --> 00:30:16,420
+Xem các giáo trình cho cụ thể của việc thực hiện.
+
+632
+00:30:16,420 --> 00:30:19,540
+>> Bài giảng, trong khi đó, trái với những gì là chính thức trong danh mục,
+
+633
+00:30:19,540 --> 00:30:22,060
+nói chung sẽ chỉ đáp ứng cho chỉ một giờ.
+
+634
+00:30:22,060 --> 00:30:24,240
+Nhân dịp chúng ta có thể chạy một ít lâu.
+
+635
+00:30:24,240 --> 00:30:26,800
+Nhưng hãy nhớ rằng mục tiêu trong các bài giảng của CS50
+
+636
+00:30:26,800 --> 00:30:28,980
+là cung cấp cho bạn một cái nhìn tổng quan về khái niệm,
+
+637
+00:30:28,980 --> 00:30:31,830
+hy vọng số cuộc biểu tình, thậm chí có một số quà tặng,
+
+638
+00:30:31,830 --> 00:30:34,390
+về những gì đang chờ đợi cho các tuần lễ sau.
+
+639
+00:30:34,390 --> 00:30:37,730
+>> Và như vậy trong bài giảng, chúng ta sẽ khám phá những chủ đề và các ví dụ với nhau,
+
+640
+00:30:37,730 --> 00:30:41,420
+đưa sinh viên lên trên sân khấu, và nhân viên lên sân khấu thường xuyên như chúng ta có thể,
+
+641
+00:30:41,420 --> 00:30:43,740
+chỉ một vài giờ mỗi tuần.
+
+642
+00:30:43,740 --> 00:30:47,435
+Phần, trong khi đó, sẽ được cung cấp bởi các folks here-- nhiều
+
+643
+00:30:47,435 --> 00:30:50,060
+trong số họ giảng dạy nghiên cứu sinh, một số trong số họ sẽ trình assistants--
+
+644
+00:30:50,060 --> 00:30:51,160
+được diễn ra hàng tuần.
+
+645
+00:30:51,160 --> 00:30:52,940
+>> Và điều quan trọng cần lưu ý là chúng ta
+
+646
+00:30:52,940 --> 00:30:55,920
+làm have-- không giống như tiên Nights, nhạc class--
+
+647
+00:30:55,920 --> 00:30:59,220
+bài nhạc khác nhau của các bộ phận cho sinh viên ít thoải mái, hơn
+
+648
+00:30:59,220 --> 00:31:01,150
+thoải mái, và đâu đó ở giữa.
+
+649
+00:31:01,150 --> 00:31:03,559
+Và thẳng thắn, bạn biết nếu bạn không thoải mái.
+
+650
+00:31:03,559 --> 00:31:05,600
+Và bạn có thể biết nếu bạn cảm thấy thoải mái hơn.
+
+651
+00:31:05,600 --> 00:31:09,920
+Và nếu bạn không thực sự chắc chắn, bạn là theo định nghĩa ở đâu đó ở giữa.
+
+652
+00:31:09,920 --> 00:31:12,850
+Vì vậy, khi nói đến thời gian để phần trong một tuần hoặc lâu hơn, mỗi giáo trình,
+
+653
+00:31:12,850 --> 00:31:14,070
+chúng tôi sẽ hỏi bạn câu hỏi đó.
+
+654
+00:31:14,070 --> 00:31:16,890
+Và bạn có thể tự chọn dựa trên mức độ thoải mái của riêng bạn
+
+655
+00:31:16,890 --> 00:31:22,220
+và ở với students-- được với màu xanh lá cây dots-- tương tự ở mức độ thoải mái cho bạn.
+
+656
+00:31:22,220 --> 00:31:25,710
+>> Trong khi đó, chúng tôi có bộ vấn đề, mà sẽ cuối cùng
+
+657
+00:31:25,710 --> 00:31:28,310
+xác định kinh nghiệm của bạn trong khóa học này.
+
+658
+00:31:28,310 --> 00:31:30,370
+Họ đang được cung cấp thông thường trong nhiều ấn bản.
+
+659
+00:31:30,370 --> 00:31:34,150
+Một phiên bản tiêu chuẩn mà chúng tôi mong đợi nhất mỗi học sinh trong khóa học để giải quyết
+
+660
+00:31:34,150 --> 00:31:37,900
+mà còn là một cái gọi là phiên bản của hacker mà không cung cấp các hình thức tín dụng phụ
+
+661
+00:31:37,900 --> 00:31:41,980
+hoàn toàn nhưng thực sự các quyền khoe khoang để nói rằng bạn đã cố gắng và giải quyết
+
+662
+00:31:41,980 --> 00:31:45,250
+Hacker phiên bản của khóa học mà tiếp cận các tài liệu tương tự
+
+663
+00:31:45,250 --> 00:31:47,370
+nhưng từ một góc độ tinh vi hơn.
+
+664
+00:31:47,370 --> 00:31:49,480
+>> Những gì chúng tôi cung cấp cho phiên bản tiêu chuẩn, cho,
+
+665
+00:31:49,480 --> 00:31:51,420
+một lần nữa, một phần lớn siêu của sinh viên, không phải là
+
+666
+00:31:51,420 --> 00:31:54,060
+chỉ đi bộ thuận, đó là video do nhân viên của khóa học
+
+667
+00:31:54,060 --> 00:31:57,840
+mà thực sự bạn qua vấn đề của môn học và thiết kế có thể
+
+668
+00:31:57,840 --> 00:31:58,910
+triển khai thực hiện.
+
+669
+00:31:58,910 --> 00:32:01,434
+Và chúng ta cũng có thể, sau khi thực tế, cung cấp postmortems,
+
+670
+00:32:01,434 --> 00:32:03,350
+theo đó, nếu bạn đang tự hỏi làm thế nào bạn có thể có
+
+671
+00:32:03,350 --> 00:32:05,930
+hoặc cần phải giải quyết một số vấn đề, đội ngũ giáo viên
+
+672
+00:32:05,930 --> 00:32:08,640
+sẽ hướng dẫn bạn thông qua những người trên video là tốt.
+
+673
+00:32:08,640 --> 00:32:14,350
+>> Trong khi đó, những gì đang chờ đợi quá năm ngày cuối và thực tế
+
+674
+00:32:14,350 --> 00:32:16,680
+rằng chúng ta sẽ thả số vấn đề thiết lập thấp nhất của bạn.
+
+675
+00:32:16,680 --> 00:32:20,370
+Chúng tôi chắc chắn đánh giá cao mà đổi lại cho các khối lượng công việc đó 50 dự kiến
+
+676
+00:32:20,370 --> 00:32:24,020
+của bạn, cuộc sống được trong cách đôi khi, nếu không phải năm lần.
+
+677
+00:32:24,020 --> 00:32:26,150
+Và vì vậy đây sẽ cung cấp cho bạn một chút về tính linh hoạt,
+
+678
+00:32:26,150 --> 00:32:29,400
+gia hạn của bạn từ, nói rằng, một ngày thứ năm vào buổi trưa để ngày thứ sáu, vào buổi trưa.
+
+679
+00:32:29,400 --> 00:32:33,150
+Xem các giáo trình cho các chi tiết thực hiện.
+
+680
+00:32:33,150 --> 00:32:34,702
+>> Bây giờ những gì doanh nghiệp đang chờ đợi?
+
+681
+00:32:34,702 --> 00:32:36,660
+Và nó chỉ xảy ra với tôi bây giờ chỉ cần bao lâu
+
+682
+00:32:36,660 --> 00:32:38,333
+Tôi đang gặp các bạn đứng ở đây trên sân khấu.
+
+683
+00:32:38,333 --> 00:32:39,060
+>> [Cười]
+
+684
+00:32:39,060 --> 00:32:41,867
+>> DAVID J. Malan: Nhưng chúng ta sẽ nhận được để kết thúc tuyệt đỉnh trước khi dài.
+
+685
+00:32:41,867 --> 00:32:43,700
+Vì vậy, những gì đang chờ đợi trong điều khoản của bộ vấn đề?
+
+686
+00:32:43,700 --> 00:32:47,099
+Vâng, có lẽ là một lời trêu ghẹo của những gì chúng ta đã làm năm ngoái với những người tiền nhiệm của mình.
+
+687
+00:32:47,099 --> 00:32:49,140
+Trong vấn đề đầu tiên thiết lập vào năm ngoái, chúng tôi giới thiệu
+
+688
+00:32:49,140 --> 00:32:51,630
+Scratch, một ngôn ngữ lập trình đồ họa
+
+689
+00:32:51,630 --> 00:32:54,570
+cho phép bạn chương trình nghĩa đen bằng cách kéo và thả các mảnh ghép,
+
+690
+00:32:54,570 --> 00:32:57,220
+như thế này, đó là gợi nhớ của các cấu trúc
+
+691
+00:32:57,220 --> 00:32:59,260
+sẽ thấy chỉ cần một tuần vì thế, khi chúng ta chuyển đổi
+
+692
+00:32:59,260 --> 00:33:01,870
+đến một ngôn ngữ truyền thống hơn, được gọi là C.
+
+693
+00:33:01,870 --> 00:33:03,930
+>> Năm ngoái chúng tôi đã tiến hành cho vấn đề thiết lập này,
+
+694
+00:33:03,930 --> 00:33:06,720
+liên quan cho việc mã hóa, những xáo trộn thông tin
+
+695
+00:33:06,720 --> 00:33:10,410
+để giữ cho nó khỏi đôi mắt của chính phủ hoặc của bạn bè mà bạn không muốn nhìn thấy nó.
+
+696
+00:33:10,410 --> 00:33:12,540
+Mã hóa ở đây là một thông điệp rằng bạn sớm
+
+697
+00:33:12,540 --> 00:33:15,740
+sẽ có thể giải mã hoặc de-tranh giành.
+
+698
+00:33:15,740 --> 00:33:17,960
+>> Breakout là một vấn đề thiết lập vào năm ngoái, trong đó
+
+699
+00:33:17,960 --> 00:33:21,530
+bạn sử dụng các kỹ năng lập trình mới được tìm thấy để thực sự thực hiện
+
+700
+00:33:21,530 --> 00:33:24,840
+một trò chơi wherein-- như bạn có thể nhớ lại từ childhood--
+
+701
+00:33:24,840 --> 00:33:28,040
+mục đích là để bash các viên gạch đó là trên đỉnh màn hình
+
+702
+00:33:28,040 --> 00:33:30,190
+ở đây, tích lũy một số điểm trên đường đi,
+
+703
+00:33:30,190 --> 00:33:35,460
+và thực hiện các thuật toán của riêng bạn với những giải pháp này cuối cùng
+
+704
+00:33:35,460 --> 00:33:37,357
+cho phép bạn chơi các trò chơi.
+
+705
+00:33:37,357 --> 00:33:39,440
+Trong khi đó, sau này trong học kỳ, chúng tôi sẽ cung cấp cho bạn
+
+706
+00:33:39,440 --> 00:33:43,470
+một từ điển của 143.091 từ tiếng Anh.
+
+707
+00:33:43,470 --> 00:33:46,300
+Và bạn sẽ được thử thách để viết một chương trình mà
+
+708
+00:33:46,300 --> 00:33:50,260
+chính tả kiểm tra, tài liệu, bằng cách tải nhiều từ vào bộ nhớ
+
+709
+00:33:50,260 --> 00:33:52,300
+càng hiệu quả càng tốt.
+
+710
+00:33:52,300 --> 00:33:54,240
+Nói chung rỗ bạn với bạn học
+
+711
+00:33:54,240 --> 00:33:56,610
+nếu bạn chọn tham gia vào một chút thách thức trong ban lãnh đạo
+
+712
+00:33:56,610 --> 00:34:00,090
+để xem ai có thể sử dụng những giây ít nhất trong thời gian chạy,
+
+713
+00:34:00,090 --> 00:34:03,550
+và số lượng ít nhất của MB bộ nhớ,
+
+714
+00:34:03,550 --> 00:34:08,659
+và thực sự tinh chỉnh chương trình của bạn sẽ vô cùng hiệu quả nguồn tài nguyên không
+
+715
+00:34:08,659 --> 00:34:09,820
+chỉ thời gian.
+
+716
+00:34:09,820 --> 00:34:13,239
+>> Năm ngoái, cũng vậy, chúng ta nhìn vào cuối học kỳ tại lập trình web.
+
+717
+00:34:13,239 --> 00:34:16,230
+Và quả thực, chúng tôi sẽ làm điều đó một lần nữa trong năm nay với nhiều bài tập,
+
+718
+00:34:16,230 --> 00:34:20,290
+giới thiệu bạn với các kỹ thuật và những suy nghĩ mà bạn có thể áp dụng
+
+719
+00:34:20,290 --> 00:34:23,489
+các kỹ năng lập trình cho các trang web, các trang web động,
+
+720
+00:34:23,489 --> 00:34:26,639
+các trang web thực sự giải quyết vấn đề và hành xử khác nhau
+
+721
+00:34:26,639 --> 00:34:30,620
+và không chỉ đơn giản là trang web tĩnh với thông tin tĩnh.
+
+722
+00:34:30,620 --> 00:34:32,854
+>> Các dự án cuối cùng cuối cùng sẽ xác định, mặc dù,
+
+723
+00:34:32,854 --> 00:34:34,770
+đỉnh cao của các khóa học cho sinh viên, trong đó
+
+724
+00:34:34,770 --> 00:34:37,228
+bạn sẽ được thử thách để thực hiện hầu hết bất cứ điều gì quan tâm
+
+725
+00:34:37,228 --> 00:34:40,590
+cho bạn, miễn là nó bằng cách nào đó rút ra những bài học của khóa học.
+
+726
+00:34:40,590 --> 00:34:42,930
+>> Và như bạn đã thấy trong đoạn video lúc bắt đầu,
+
+727
+00:34:42,930 --> 00:34:47,340
+chúng tôi sẽ kết thúc học kỳ với CS50 Hackathon, mà nếu không quen thuộc,
+
+728
+00:34:47,340 --> 00:34:51,420
+sẽ bắt đầu lúc 07:00 một đêm và kết thúc lúc 7:00 sáng hôm sau.
+
+729
+00:34:51,420 --> 00:34:53,614
+Khoảng 09:00, chúng tôi sẽ đặt hàng trong bữa ăn tối đầu tiên.
+
+730
+00:34:53,614 --> 00:34:55,489
+Khoảng 01:00, chúng tôi sẽ đặt hàng trong bữa ăn tối thứ hai.
+
+731
+00:34:55,489 --> 00:34:57,490
+Và nếu bạn vẫn đang đứng ở 5:00, chúng tôi
+
+732
+00:34:57,490 --> 00:35:00,320
+Xe đưa đón xe buýt sẽ bạn IHOP cho bữa ăn sáng.
+
+733
+00:35:00,320 --> 00:35:04,980
+>> Hội chợ CS50, trong khi đó, là một sự kiện mà cộng 2.000 giảng viên, sinh viên,
+
+734
+00:35:04,980 --> 00:35:07,850
+và nhân viên từ khắp khuôn viên trường sẽ đến để xem thành quả của bạn
+
+735
+00:35:07,850 --> 00:35:10,150
+trong khóa học và các dự án cuối cùng và sáng tạo
+
+736
+00:35:10,150 --> 00:35:14,960
+mà bạn tạo ra trên máy tính xách tay, máy tính để bàn, hay thậm chí có bóng đèn của bạn.
+
+737
+00:35:14,960 --> 00:35:17,340
+>> Trong khi đó, giờ làm việc và cơ cấu hỗ trợ.
+
+738
+00:35:17,340 --> 00:35:20,480
+Và bây giờ nó sẽ đã được một thời gian tốt hơn để mang lại cho tất cả các bạn lên.
+
+739
+00:35:20,480 --> 00:35:24,310
+>> Thời gian làm việc sẽ diễn ra bốn đêm một tuần cho nhiều giờ mỗi đêm
+
+740
+00:35:24,310 --> 00:35:27,710
+với thường 20-30 nhân viên của khóa học về nhiệm vụ cùng một lúc
+
+741
+00:35:27,710 --> 00:35:31,240
+để cung cấp cho bạn cơ hội thân mật một ngày-một cho hỗ trợ
+
+742
+00:35:31,240 --> 00:35:33,790
+với bộ vấn đề của khóa học.
+
+743
+00:35:33,790 --> 00:35:36,120
+Dạy kèm quá sẽ có sẵn, đặc biệt
+
+744
+00:35:36,120 --> 00:35:39,630
+cho sinh viên ít comfortable-- hoặc dám nói nhất comfortable-- cho ai
+
+745
+00:35:39,630 --> 00:35:41,869
+giờ làm việc không phải là môi trường nuôi dưỡng nhất
+
+746
+00:35:41,869 --> 00:35:43,660
+và chắc chắn không phải hầu hết những căng thẳng-miễn phí.
+
+747
+00:35:43,660 --> 00:35:47,430
+Đặc biệt là khi thời hạn được nhấn, chúng tôi sẽ chủ động ghép bạn mình
+
+748
+00:35:47,430 --> 00:35:51,440
+với một thành viên của đội ngũ nhân viên để làm việc với một số lịch trình thường xuyên như nhu cầu của bạn
+
+749
+00:35:51,440 --> 00:35:53,850
+và lịch trình của họ cho phép.
+
+750
+00:35:53,850 --> 00:35:55,260
+>> Và nhân viên.
+
+751
+00:35:55,260 --> 00:36:01,020
+Cho phép tôi giới thiệu Davon, Rob, và Gabriel, người đứng đầu của năm nay.
+
+752
+00:36:01,020 --> 00:36:02,370
+Nếu bạn từng muốn say--
+
+753
+00:36:02,370 --> 00:36:03,349
+>> [Vỗ tay]
+
+754
+00:36:03,349 --> 00:36:03,849
+--một từ.
+
+755
+00:36:03,849 --> 00:36:05,328
+[Vỗ tay]
+
+756
+00:36:05,328 --> 00:36:10,270
+ 
+
+757
+00:36:10,270 --> 00:36:13,220
+Davon hơn ở đây là người quản lý của khóa học,
+
+758
+00:36:13,220 --> 00:36:15,730
+có nghĩa là trong vai trò toàn thời gian của mình, ông sẽ giúp cho việc thực thi
+
+759
+00:36:15,730 --> 00:36:18,424
+và hậu cần của CS50.
+
+760
+00:36:18,424 --> 00:36:19,340
+DAVON: Vâng, hi, guys.
+
+761
+00:36:19,340 --> 00:36:20,965
+Bạn sẽ nhìn thấy rất nhiều với tôi vào giờ hành chính.
+
+762
+00:36:20,965 --> 00:36:22,110
+Tôi sẽ dạy phần.
+
+763
+00:36:22,110 --> 00:36:25,150
+Và nếu bạn bắn các email trước, tôi có lẽ sẽ được đáp ứng.
+
+764
+00:36:25,150 --> 00:36:27,670
+Vì vậy, tôi sẽ thấy rất nhiều bạn tất cả học kỳ.
+
+765
+00:36:27,670 --> 00:36:29,890
+Và chào mừng đến CS50.
+
+766
+00:36:29,890 --> 00:36:38,330
+>> DAVID J. Malan: Và bây giờ Gabriel, bản thân ông là người chỉ là một sinh viên năm nhất năm ngoái,
+
+767
+00:36:38,330 --> 00:36:41,820
+nhưng đối với quá khứ vài năm đã được điều hành phiên bản riêng của mình CS50
+
+768
+00:36:41,820 --> 00:36:44,660
+ở Brazil, theo đó ông đã tải về tất cả các content-- của khóa học
+
+769
+00:36:44,660 --> 00:36:46,890
+mà rõ ràng là đang được quay và đặt online--
+
+770
+00:36:46,890 --> 00:36:51,480
+để ông có thể dịch nó sang tiếng Bồ Đào Nha và sau đó dạy cho hơn 100
+
+771
+00:36:51,480 --> 00:36:54,610
+các bạn cùng lớp của mình trong quá trình của một vài năm,
+
+772
+00:36:54,610 --> 00:36:57,650
+giảng dạy trong chương trình giảng dạy tiếng mẹ đẻ của mình của khóa học.
+
+773
+00:36:57,650 --> 00:36:58,964
+>> GABRIEL: Hello.
+
+774
+00:36:58,964 --> 00:37:00,912
+>> [Vỗ tay]
+
+775
+00:37:00,912 --> 00:37:06,669
+ 
+
+776
+00:37:06,669 --> 00:37:07,710
+GABRIEL: Hi, tôi là Gabriel.
+
+777
+00:37:07,710 --> 00:37:09,340
+Tôi là TF đầu của khóa học.
+
+778
+00:37:09,340 --> 00:37:10,780
+Và tôi hy vọng bạn sẽ yêu CS50.
+
+779
+00:37:10,780 --> 00:37:12,830
+Đây là CS50.
+
+780
+00:37:12,830 --> 00:37:14,697
+>> DAVID J. Malan: Bây giờ cho Rob.
+
+781
+00:37:14,697 --> 00:37:15,780
+Oh, bạn muốn giới thiệu?
+
+782
+00:37:15,780 --> 00:37:16,696
+>> ROB: Không, tôi không biết.
+
+783
+00:37:16,696 --> 00:37:18,225
+[Cười]
+
+784
+00:37:18,225 --> 00:37:19,475
+DAVID J. Malan: Và Rob Boden.
+
+785
+00:37:19,475 --> 00:37:22,300
+[Cười]
+
+786
+00:37:22,300 --> 00:37:23,800
+ROB: Hi, tôi là Rob.
+
+787
+00:37:23,800 --> 00:37:27,220
+Đây là năm thứ năm của tôi tham gia với khóa học.
+
+788
+00:37:27,220 --> 00:37:29,220
+Mỗi năm, nó chỉ là một lớp học tốt hơn và tốt hơn,
+
+789
+00:37:29,220 --> 00:37:31,550
+vậy các bạn sẽ rõ ràng để được awesome.
+
+790
+00:37:31,550 --> 00:37:33,181
+Tôi hy vọng tất cả các bạn có vui vẻ với nó.
+
+791
+00:37:33,181 --> 00:37:34,430
+Tôi sẽ vui chơi với nó.
+
+792
+00:37:34,430 --> 00:37:36,670
+Vì vậy, nhìn thấy bạn xung quanh.
+
+793
+00:37:36,670 --> 00:37:38,445
+>> DAVID J. Malan: Và thời gian sẽ không cho phép us--
+
+794
+00:37:38,445 --> 00:37:39,670
+>> [Vỗ tay]
+
+795
+00:37:39,670 --> 00:37:41,661
+>> Thời gian sẽ không cho phép chúng tôi để giới thiệu tất cả mọi người
+
+796
+00:37:41,661 --> 00:37:44,660
+trên sân khấu và tất cả các đồng nghiệp của họ đang mua sắm các lớp học ngày hôm nay.
+
+797
+00:37:44,660 --> 00:37:47,390
+Nhưng cho phép tôi giới thiệu Belinda và CS50 Puzzle
+
+798
+00:37:47,390 --> 00:37:49,550
+Day, đang chờ đợi này thứ bảy tới, mà
+
+799
+00:37:49,550 --> 00:37:51,800
+là người đầu tiên của sự kiện quy mô lớn của khóa học.
+
+800
+00:37:51,800 --> 00:37:54,300
+>> Một đặc biệt này có nghĩa là để búa nhà điểm
+
+801
+00:37:54,300 --> 00:37:57,580
+rằng khoa học máy tính là cuối cùng không về lập trình, nhưng thay
+
+802
+00:37:57,580 --> 00:37:59,280
+về giải quyết vấn đề tổng quát hơn.
+
+803
+00:37:59,280 --> 00:38:01,450
+Và Puzzle ngày, như bạn sẽ thấy, sẽ mang lại cho bạn
+
+804
+00:38:01,450 --> 00:38:04,207
+và các bạn cùng lớp của bạn together-- chúng tôi hy vọng vào thứ Bảy này.
+
+805
+00:38:04,207 --> 00:38:04,961
+>> BELINDA: OK.
+
+806
+00:38:04,961 --> 00:38:05,750
+Chao cac bạn.
+
+807
+00:38:05,750 --> 00:38:06,740
+Vì vậy, nhờ.
+
+808
+00:38:06,740 --> 00:38:10,120
+Vì vậy, khi đội trưởng lừng lẫy của chúng tôi cho biết, tên của tôi Belinda.
+
+809
+00:38:10,120 --> 00:38:12,100
+Tôi là một sinh viên năm hai tại Quincy House.
+
+810
+00:38:12,100 --> 00:38:15,730
+>> Tôi, giống như các bạn, mất CS50 năm qua, thực sự yêu thích nó.
+
+811
+00:38:15,730 --> 00:38:17,960
+Tôi có một điểm mềm cho các bạn ở hàng thứ ba.
+
+812
+00:38:17,960 --> 00:38:21,384
+Và tôi tự hào để nói, tôi là bây giờ trong một mối quan hệ cam kết
+
+813
+00:38:21,384 --> 00:38:22,300
+với CS50 [không nghe được].
+
+814
+00:38:22,300 --> 00:38:22,799
+ĐƯỢC.
+
+815
+00:38:22,799 --> 00:38:26,140
+Đó là phiên bản què của tôi về một trò đùa.
+
+816
+00:38:26,140 --> 00:38:28,320
+>> Dù sao, vì vậy di chuyển trên, chỉ muốn mời
+
+817
+00:38:28,320 --> 00:38:31,439
+các bạn tất cả các i-phòng thí nghiệm, hoặc HBS phát ban.
+
+818
+00:38:31,439 --> 00:38:33,730
+Chúng tôi đang đi để được gặp Puzzle ngày 12:00-03:00.
+
+819
+00:38:33,730 --> 00:38:37,680
+Và đó là một cơ hội tuyệt vời cho các bạn để đáp ứng đồng bạn bè CS,
+
+820
+00:38:37,680 --> 00:38:42,780
+giải quyết một số phi-CS câu đố, như thuyền trưởng đã đề cập, và cũng ăn một số thực phẩm miễn phí,
+
+821
+00:38:42,780 --> 00:38:46,910
+kiếm được một số giải thưởng tuyệt vời, giống như thẻ quà tặng, $ 75 cho mỗi người,
+
+822
+00:38:46,910 --> 00:38:48,400
+và also-- đó là gì?
+
+823
+00:38:48,400 --> 00:38:49,540
+Wii U hay một cái gì đó?
+
+824
+00:38:49,540 --> 00:38:50,333
+Wii U?
+
+825
+00:38:50,333 --> 00:38:51,040
+Vâng.
+
+826
+00:38:51,040 --> 00:38:52,330
+Đối với xổ số của chúng tôi.
+
+827
+00:38:52,330 --> 00:38:52,830
+Awesome.
+
+828
+00:38:52,830 --> 00:38:54,310
+Vì vậy, tôi sẽ dính xung quanh sau khi lớp.
+
+829
+00:38:54,310 --> 00:38:56,770
+Và nếu bạn có bất kỳ câu hỏi, cho tôi biết.
+
+830
+00:38:56,770 --> 00:38:59,980
+>> DAVID J. Malan: Và bạn sẽ thấy, ngoài này không có gì để làm hôm nay là.
+
+831
+00:38:59,980 --> 00:39:01,920
+Các bộ vấn đề đầu tiên sẽ đi ra thứ Sáu.
+
+832
+00:39:01,920 --> 00:39:05,420
+Tuy nhiên, để mang lại cho chúng tôi về nhà ngày hôm nay, tôi muốn giới thiệu với bạn một cách cụ thể hơn
+
+833
+00:39:05,420 --> 00:39:09,080
+thành viên của các nhân viên, Colton Ogden đây, có bàn tay hiện nay
+
+834
+00:39:09,080 --> 00:39:12,250
+bảo vệ ở trên bạn với bộ điều khiển MIDI này
+
+835
+00:39:12,250 --> 00:39:15,170
+búa nhà điểm thêm rằng khoa học máy tính, quá,
+
+836
+00:39:15,170 --> 00:39:19,130
+có tính ứng dụng vượt xa kỹ thuật và STEM và khoa học máy tính riêng của mình,
+
+837
+00:39:19,130 --> 00:39:22,890
+mở rộng thậm chí đến các lĩnh vực như âm nhạc.
+
+838
+00:39:22,890 --> 00:39:30,590
+>> Colton có lòng offered-- Tôi nghĩ rằng một trong số họ đã đi để sửa chữa tập trung.
+
+839
+00:39:30,590 --> 00:39:34,400
+Andrew, nếu chúng ta có thể triệu tập tập trung ở đây để chỉ một khoảnh khắc.
+
+840
+00:39:34,400 --> 00:39:36,780
+>> Chương trình gì Colton đã thực hiện trước là
+
+841
+00:39:36,780 --> 00:39:40,345
+thiết bị này, pad này của nút mà bạn nhìn thấy trong hình ở đây,
+
+842
+00:39:40,345 --> 00:39:42,470
+như một bộ điều khiển MIDI, theo đó mỗi người trong những nút
+
+843
+00:39:42,470 --> 00:39:47,080
+là dây vào một nốt nhạc đặc biệt hay một âm thanh, nói chung một bản ghi âm,
+
+844
+00:39:47,080 --> 00:39:50,445
+như vậy mà bằng cách chơi mô hình của các nút này, giống như mô hình của các bit,
+
+845
+00:39:50,445 --> 00:39:52,620
+có thể đại diện cho các khái niệm cấp độ cao khác.
+
+846
+00:39:52,620 --> 00:39:56,750
+Liệu anh có thể cuối cùng để đưa chúng tôi về nhà ở đây ngày hôm nay?
+
+847
+00:39:56,750 --> 00:39:59,540
+Nếu không có thêm ado, nếu chúng ta có thể tắt đèn,
+
+848
+00:39:59,540 --> 00:40:03,145
+và bật màn hình phía sau Colton.
+
+849
+00:40:03,145 --> 00:40:03,865
+>> Đung Woo!
+
+850
+00:40:03,865 --> 00:40:06,090
+>> DAVID J. Malan: Đây là CS50.
+
+851
+00:40:06,090 --> 00:40:10,518
+>> [MUSIC CHƠI]
+
+852
+00:40:10,518 --> 00:42:46,018
+ 
+
+853
+00:42:46,018 --> 00:42:49,420
+>> [Vỗ tay]
+
+854
+00:42:49,420 --> 00:42:54,766
+ 
+
+855
+00:42:54,766 --> 00:42:56,450
+>> Đó là nó cho CS50.
+
+856
+00:42:56,450 --> 00:42:57,950
+Chúng tôi sẽ nhìn thấy bạn thứ Sáu.
+
+857
+00:42:57,950 --> 00:42:59,890
+Một số bánh đang chờ bạn trong các cánh ngang.
+
+858
+00:42:59,890 --> 00:43:04,046
+ 
+
+859
+00:43:04,046 --> 00:43:08,850
+>> [NHẠC ĐANG CHƠI]
+
+860
+00:43:08,850 --> 00:45:49,227
+ 
+
